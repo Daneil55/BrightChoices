@@ -7,11 +7,11 @@ namespace BrightChoices;
 public partial class Publisherxaml : ContentPage
 {
     private readonly FirebaseClient firebase;
-    public Publisherxaml(FirebaseClient fire)
+    public Publisherxaml(FirebaseClient fibaseobj)
 	{
 
 		InitializeComponent();
-        fire = firebase;
+        firebase = fibaseobj;
         Profile_Ready();
 
     }
@@ -38,21 +38,19 @@ public partial class Publisherxaml : ContentPage
 
         firebase.Child("PostedModel").PostAsync(new PostedModel
         {
-            Id = ids,
-            posterImage = images,
-            posterName = fullnames,
-            posteremail = emails,
+            Id = 0,
+            posterName =fullnames,
             posterUsername = usernames,
-
-
-            postimage = postimages,
-            postaudio = postimages,
-            postVideo = videos,
-            postId = ids,
+            posteremail = emails,
+            posterImage = images,
+            postId = 0,
             posttext = texts,
-            like = likes, 
-            share = shares,
-            comment = comments          
+            postimage = postimages,
+            postVideo = video,
+            postaudio = video,                   
+            like = 5,
+            comment = comments,
+            share = 5           
         });
 
         DisplayAlert("Message", "Posted", "ok");
@@ -101,6 +99,6 @@ public partial class Publisherxaml : ContentPage
     int share = 0;
     private void postbutton_Clicked(object sender, EventArgs e)
     {
-        server(1, MainPage.ImagePro, ImageToBinary(Imagelink),MainPage.fullname,MainPage.emails,MainPage.usernames, Post_editor.Text,+1, audio, video," ", +1,share);
+        server(1, MainPage.ImagePro, ImageToBinary(Imagelink),MainPage.fullname,MainPage.emails,MainPage.usernames, Post_editor.Text, 1, audio, video," ", 1,share);
     }
 }

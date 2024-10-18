@@ -21,6 +21,7 @@ public partial class Forum : ContentPage
         DataFromFirebase.Clear();
         PostFromFirebase.Clear();
         Data_Reader();
+        Post_Reader();
         Profile_Ready();
 
         ListVs.ItemsSource = DataFromFirebase;
@@ -86,7 +87,7 @@ public partial class Forum : ContentPage
 
     private void ColorFrame_Loaded(object sender, EventArgs e)
     {
-        var lightGray = Color.FromRgba(211, 211, 211, 0.2); // Light Gray
+        var lightGray = Color.FromRgba(0, 0, 0, 0.4); // Light Gray
         var frame = new Frame
         {
             BackgroundColor = lightGray,

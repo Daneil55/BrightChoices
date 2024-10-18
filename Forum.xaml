@@ -56,9 +56,9 @@
         </Frame>
 
 
-            <ScrollView Grid.Row="2">
+            <Frame Grid.Row="3" HeightRequest="600" Padding="0">
 
-        <CollectionView x:Name="ListV" ItemsSource="{Binding DataFromFirebase}" >
+                <CollectionView x:Name="ListV" ItemsSource="{Binding PostFromFirebase}" >
 
             <CollectionView.ItemTemplate >
                 <DataTemplate >
@@ -66,48 +66,45 @@
                     <Frame Grid.Row="2" Margin="5" CornerRadius="45">
                             
             <Grid  Margin="-20" BackgroundColor="Beige">
-                <Image Source="j.jpeg" Aspect="AspectFill" />
+                                        <Image Source="{Binding postimage, Converter={StaticResource ByteArrayToImage}}"  Aspect="AspectFill" />
 
 
-                <Grid RowDefinitions="65, 2*, 145" Margin="0" BackgroundColor="Transparent" Padding="5" >
+                 <Grid RowDefinitions="65, 2*, 145" Margin="0" BackgroundColor="Transparent" Padding="5" >
 
                     <Frame Grid.Row="0" HorizontalOptions="Start" Loaded="ColorFrame_Loaded" Padding="1" BorderColor="Transparent" BackgroundColor="#D3D3D3" x:Name="ColorFrame" WidthRequest="250" CornerRadius="30">
                         <Grid ColumnDefinitions="45,*" Margin="0" ColumnSpacing="0"  Padding="5" >
                          <Frame Grid.Column="0"  Padding="0" Margin="10" BackgroundColor="Transparent" BorderColor="Transparent" HeightRequest="50" WidthRequest="50" CornerRadius="110" >
 
-                                <Image Source="j.jpeg" Aspect="Fill"  />
+                                                        <Image Source="{Binding posterImage, Converter={StaticResource ByteArrayToImage}}" Aspect="Fill"  />
                             </Frame>
                              <Grid RowDefinitions="*,*" RowSpacing="0" Grid.Column="1 " Margin="-5" HorizontalOptions="Center">
-                                    <Label Text="Alana maesya"  TextColor="White" FontSize="17" FontAttributes="Bold" Grid.Row="0" VerticalOptions="Start" HorizontalOptions="Center" />
-                                                                 
-                                    <Label Text="@maya.c" TextColor="White" FontSize="15"  Grid.Row="1" VerticalOptions="Start" HorizontalOptions="Start" />
+                                    <Label Text="{Binding posterName}"  TextColor="White" FontSize="17" FontAttributes="Bold" Grid.Row="0" VerticalOptions="Start" HorizontalOptions="Center" />
+
+                                                        <Label Text="{Binding posterUsername}" WidthRequest="150" HeightRequest="10" TextColor="White" FontSize="15"  Grid.Row="1" VerticalOptions="Start" HorizontalOptions="Start" />
 
                             </Grid>   
                         </Grid>
                     </Frame>
-                    <Frame Grid.Row="2" Padding="0" HasShadow="True" BorderColor="Transparent" x:Name="CommentForm" Loaded="CommentForm_Loaded" BackgroundColor="Transparent" >
-                        <Grid RowDefinitions="*,*">
-                            <Frame BorderColor="Transparent" BackgroundColor="Transparent" Grid.Row="0">
-                                <Grid ColumnSpacing="2" Padding="0" ColumnDefinitions="*,*,*,*,*,*">
-                                    <Image Grid.Column="0" HorizontalOptions="Start" WidthRequest="30" HeightRequest="30" Source="heart.png"/>
-                                    <Label Grid.Column="1" Text="128" HorizontalOptions="Start" TextColor="White" FontSize="Body" WidthRequest="30" HeightRequest="20"/>
+                    <Frame Grid.Row="2" VerticalOptions="End" Padding="0" HasShadow="True" BorderColor="Transparent" x:Name="CommentForm" Loaded="CommentForm_Loaded" BackgroundColor="Transparent" HeightRequest="100">
+                                                <Grid RowDefinitions="*,*">
+                                                    <Frame BorderColor="Transparent" BackgroundColor="Transparent" Grid.Row="0">
+                                                        <Grid ColumnSpacing="2" Padding="0" ColumnDefinitions="*,*,*,*,*,*">
+                                                            <Image Grid.Column="0" HorizontalOptions="Start" WidthRequest="30" HeightRequest="30" Source="heart.png"/>
+                                                            <Label Grid.Column="1" Text="{Binding like}" HorizontalOptions="Start" TextColor="White" FontSize="Body" WidthRequest="30" HeightRequest="20"/>
 
-                                    <Image Grid.Column="2" HorizontalOptions="Start" WidthRequest="30" HeightRequest="30" Source="comment.png"/>
-                                    <Label Grid.Column="3" Text="128" HorizontalOptions="Start" TextColor="White" FontSize="Body" WidthRequest="30" HeightRequest="20"/>
+                                                            <Image Grid.Column="2" HorizontalOptions="Start" WidthRequest="30" HeightRequest="30" Source="comment.png"/>
+                                                            <Label Grid.Column="3" Text="{Binding like}" HorizontalOptions="Start" TextColor="White" FontSize="Body" WidthRequest="30" HeightRequest="20"/>
 
-                                    <Image Grid.Column="4" HorizontalOptions="Start" WidthRequest="30" HeightRequest="30" Source="send.png"/>
-                                    <Label Grid.Column="5" Text="128" HorizontalOptions="Start" TextColor="White" FontSize="Body" WidthRequest="30" HeightRequest="20"/>
+                                                            <Image Grid.Column="4" HorizontalOptions="Start" WidthRequest="30" HeightRequest="30" Source="send.png"/>
+                                                            <Label Grid.Column="5" Text="{Binding share}" HorizontalOptions="Start" TextColor="White" FontSize="Body" WidthRequest="30" HeightRequest="20"/>
 
-                                </Grid>
-                            </Frame>
+                                                        </Grid>
+                                                    </Frame>
+                                                    <Label Margin="5" FontAttributes="Bold" TextColor="White" FontSize="15" Grid.Row="1" Text="{Binding posttext}"/>
 
-                                <Label Margin="5" FontAttributes="Bold" TextColor="White" FontSize="15" Grid.Row="1" Text="Pages you view in this window won't appear in the browser history and they won't leave other traces, like cookies, on the computer"/>
-                            
+                                                </Grid>
 
-                        </Grid>
-                        
-
-                    </Frame>
+                                            </Frame>
 
 
 
@@ -121,10 +118,10 @@
                     </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-            </ScrollView>
+            </Frame>
 
 
-            <ActivityIndicator IsRunning="True" Grid.Row="2"/>
+            <ActivityIndicator IsRunning="True" VerticalOptions="End" Grid.Row="2"/>
 
 
         </Grid>

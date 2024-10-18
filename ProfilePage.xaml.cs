@@ -1,12 +1,18 @@
+using BrightChoices.Models;
+using Microsoft.Maui.Storage;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+
 namespace BrightChoices;
 
 public partial class ProfilePage : ContentPage
 {
-	public ProfilePage()
-	{
+    ObservableCollection<PostedModel> PostFromFirebase { get; set; } = new ObservableCollection<PostedModel>();
+
+    public ProfilePage()
+    {
 		InitializeComponent();
         Profile_Ready();
-
     }
 
     public void Profile_Ready()

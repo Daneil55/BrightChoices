@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BrightChoices.Models
 {
-    internal class PostedModel
+    class PostedModel
     {
         public int Id { get; set; } = 0;
         public string posterName { get; set; }
@@ -24,8 +24,6 @@ namespace BrightChoices.Models
         public string comment {  get; set; }
         public int share { get; set; } 
 
-
-
-
+        public DateTime date { get; set; } = DateTime.Now;
     }
 }

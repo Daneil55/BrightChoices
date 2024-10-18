@@ -26,6 +26,7 @@ namespace BrightChoices
             builder.Services.AddSingleton<Regis>();
             builder.Services.AddSingleton<MainPage>();
             builder.Services.AddSingleton<Publisherxaml>();
+            builder.Services.AddSingleton<ProfilePage>();
     		builder.Logging.AddDebug();
 #endif
 
