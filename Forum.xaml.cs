@@ -10,6 +10,7 @@ public partial class Forum : ContentPage
 
     private readonly FirebaseClient firebase;
     ObservableCollection<RegistrationModel> DataFromFirebase { get; set; } = new ObservableCollection<RegistrationModel>();
+    ObservableCollection<PostedModel> PostFromFirebase { get; set; } = new ObservableCollection<PostedModel>();
     public Forum(FirebaseClient fibaseobj)
     {
         InitializeComponent();
@@ -17,11 +18,13 @@ public partial class Forum : ContentPage
 
         BindingContext = this;
         firebase = fibaseobj;
+        DataFromFirebase.Clear();
+        PostFromFirebase.Clear();
         Data_Reader();
         Profile_Ready();
 
         ListVs.ItemsSource = DataFromFirebase;
-        ListV.ItemsSource = DataFromFirebase;
+        ListV.ItemsSource = PostFromFirebase;
 
     }
 
@@ -47,7 +50,18 @@ public partial class Forum : ContentPage
             }
         });
     }
-            
+
+    public void Post_Reader()
+    {
+
+        firebase.Child("PostedModel").AsObservable<PostedModel>().Subscribe((item) =>
+        {
+            if (PostFromFirebase != null)
+            {
+                PostFromFirebase.Add(item.Object);
+            }
+        });
+    }
     public static void Colours()
     {
         var lightBlue = Color.FromRgba(173, 216, 230, 0.3); // Light Blue
@@ -101,7 +115,7 @@ public partial class Forum : ContentPage
 
     private void TapGestureRecognizer_Tapped(object sender, TappedEventArgs e)
     {
-        Navigation.PushAsync(new Publisherxaml());
+        Navigation.PushAsync(new Publisherxaml(firebase));
     }
 
     private void TapGestureRecognizer_Tapped_1(object sender, TappedEventArgs e)

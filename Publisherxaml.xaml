@@ -4,7 +4,7 @@
              x:Class="BrightChoices.Publisherxaml"
              Title="Publisherxaml">
     <ScrollView>
-        <VerticalStackLayout Padding="10" Spacing="10">
+        <VerticalStackLayout BackgroundColor="Beige" Padding="10" Spacing="10">
 
             <Grid ColumnDefinitions="auto,*">
 
@@ -42,7 +42,7 @@
                      PlaceholderColor="Gray"
                      FontAttributes="Bold"
                      FontSize="20"
-                      VerticalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand"
                      HorizontalOptions="FillAndExpand"
                  >
 
@@ -58,7 +58,7 @@
                     <Image 
                  x:Name="Edit_image"
                  Grid.Column="0"
-                 Source="gallery.png" 
+                 Source="image.png" 
                  HeightRequest="30"
                  WidthRequest="30"/>
 
@@ -77,11 +77,11 @@
                     <Image 
                  x:Name="Edit_video"
                  Grid.Column="0"
-                 Source="video.png" 
+                 Source="videoplayer.png" 
                  HeightRequest="35"
                  WidthRequest="30"/>
 
-                    <Label 
+                 <Label 
                  Grid.Column="1"
                  Text="Videos"
                  FontSize="20"
@@ -92,60 +92,7 @@
 
                     </Label>
                 </Grid>
-                <Grid ColumnDefinitions="auto,*" ColumnSpacing="20">
-                    <Image 
-                 Grid.Column="0"
-                 Source="friends.png" 
-                 HeightRequest="28"
-                 WidthRequest="30"/>
-
-                    <Label 
-                 Grid.Column="1"
-                 Text="Tag friends"
-                 FontSize="20"
-                 FontAttributes="Bold"
-                 HorizontalOptions="Start"
-                 VerticalOptions="Center"
-                 >
-
-                    </Label>
-                </Grid>
-                <Grid ColumnDefinitions="auto,*" ColumnSpacing="20">
-                    <Image 
-                 Grid.Column="0"
-                 Source="loca.png" 
-                 HeightRequest="28"
-                 WidthRequest="30"/>
-
-                    <Label 
-                 Grid.Column="1"
-                 Text="Add location"
-                 FontSize="20"
-                 FontAttributes="Bold"
-                 HorizontalOptions="Start"
-                 VerticalOptions="Center"
-                 >
-
-                    </Label>
-                </Grid>
-                <Grid ColumnDefinitions="auto,*" ColumnSpacing="20">
-                    <Image 
-                 Grid.Column="0"
-                 Source="unhappy.png" 
-                 HeightRequest="35"
-                 WidthRequest="30"/>
-
-                    <Label 
-                 Grid.Column="1"
-                 Text="Feeling/activities"
-                 FontSize="20"
-                 FontAttributes="Bold"
-                 HorizontalOptions="Start"
-                 VerticalOptions="Center"
-                 >
-
-                    </Label>
-                </Grid>
+               
             </VerticalStackLayout>
 
 
@@ -154,6 +101,7 @@
          x:Name="postbutton"
          Clicked="postbutton_Clicked"
          Text="POST"
+             BackgroundColor="SkyBlue"    
              HeightRequest="50"
              FontSize="25"
              FontAttributes="Bold"

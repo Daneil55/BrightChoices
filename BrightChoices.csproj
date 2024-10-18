@@ -69,12 +69,17 @@
 	  <None Remove="Resources\Images\heart.png" />
 	  <None Remove="Resources\Images\home.png" />
 	  <None Remove="Resources\Images\iconlike.png" />
+	  <None Remove="Resources\Images\image.png" />
 	  <None Remove="Resources\Images\images.png" />
 	  <None Remove="Resources\Images\j.jpeg" />
 	  <None Remove="Resources\Images\login.png" />
+	  <None Remove="Resources\Images\magnifier.png" />
 	  <None Remove="Resources\Images\notification.png" />
+	  <None Remove="Resources\Images\readingbook.png" />
+	  <None Remove="Resources\Images\search.png" />
 	  <None Remove="Resources\Images\send.png" />
 	  <None Remove="Resources\Images\share.png" />
+	  <None Remove="Resources\Images\videoplayer.png" />
 	</ItemGroup>
 
 	<ItemGroup>

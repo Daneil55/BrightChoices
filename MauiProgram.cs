@@ -25,6 +25,7 @@ namespace BrightChoices
             builder.Services.AddSingleton(new FirebaseClient("https://brightgs-a18bb-default-rtdb.asia-southeast1.firebasedatabase.app/"));
             builder.Services.AddSingleton<Regis>();
             builder.Services.AddSingleton<MainPage>();
+            builder.Services.AddSingleton<Publisherxaml>();
     		builder.Logging.AddDebug();
 #endif
 

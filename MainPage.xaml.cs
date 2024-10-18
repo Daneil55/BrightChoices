@@ -55,11 +55,11 @@ namespace BrightChoices
         public static string usernames;
         public static string bio;
         public static string fullname;
+        public static string emails;
         
 
         public bool login(string email, string passwords)
-        {
-            Data_Reader();
+        {           
 
             if (registrations.Count > 0)
             {
@@ -71,14 +71,17 @@ namespace BrightChoices
                         {
                             ImagePro = registrations[i].profileimage;
                             usernames = registrations[i].Username;
-                            usernames = registrations[i].Username;
-                            usernames = registrations[i].Username;
-                            usernames = registrations[i].Username;
-                            usernames = registrations[i].Username;
+                            fullname = registrations[i].FullName;
+                            bio = registrations[i].Bio;
+                            emails = registrations[i].Email;
                             return true;
                         }
                     }
                 }
+            }
+            else
+            {
+                DisplayAlert("Alert", "Low internet connection try again letter", "Cancel");
             }
             return false;
         }
