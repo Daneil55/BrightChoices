@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BrightChoices.Newacconte1"
+             Title="Newacconte1">
+    <VerticalStackLayout Spacing="10">
+        <Button x:Name="imageOpenformFile" Text="Open a file"/>
+        <Image x:Name="imageFile" WidthRequest="100" HeightRequest="100" BackgroundColor="Grey" Aspect="Fill" >
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+            </Image.GestureRecognizers>
+        </Image>
+        <Entry BackgroundColor="Brown" Placeholder="Name" x:Name="namebox"/>
+        <Entry Placeholder="User" x:Name="Userbox"/>
+        <Entry Placeholder="Passwork" x:Name="Passworkbox"/>
+        <Button Text="Save" x:Name="Save" Clicked="Save_Clicked" CornerRadius="20" Background="Blue" Padding="2,3" TextColor="#fff"/>
+    </VerticalStackLayout>
+
+
+</ContentPage>

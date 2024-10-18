@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BrightChoices.Publisherxaml"
+             Title="Publisherxaml">
+    <ScrollView>
+        <VerticalStackLayout Padding="10" Spacing="10">
+
+            <Grid ColumnDefinitions="auto,*">
+
+                <Frame 
+             Grid.Column="0"
+             HeightRequest="80"
+                WidthRequest="80"
+                CornerRadius="50"
+             BorderColor="White">
+                    <Image x:Name="PostPImage" WidthRequest="70" HeightRequest="70" />
+                </Frame>
+                <Grid  Grid.Column="1">
+
+
+                    <Label Grid.Row="0"
+                    x:Name="Name_Holder"
+                    Text=""
+                    FontAttributes="Bold"
+                    FontSize="20"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Center"/>
+
+
+                </Grid>
+            </Grid>
+            <Image 
+                 x:Name="Edit_images"
+                 HeightRequest="100"
+                 WidthRequest="100"/>
+
+            <Border HeightRequest="1.5"/>
+            <Grid HeightRequest="300">
+                <Editor x:Name="Post_editor"
+                Placeholder="What's on your mind?"
+                     PlaceholderColor="Gray"
+                     FontAttributes="Bold"
+                     FontSize="20"
+                      VerticalOptions="FillAndExpand"
+                     HorizontalOptions="FillAndExpand"
+                 >
+
+                </Editor>
+            </Grid>
+
+            <VerticalStackLayout  Spacing="10">
+                <Grid ColumnDefinitions="auto,*" ColumnSpacing="20">
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+
+                    </Grid.GestureRecognizers>
+                    <Image 
+                 x:Name="Edit_image"
+                 Grid.Column="0"
+                 Source="gallery.png" 
+                 HeightRequest="30"
+                 WidthRequest="30"/>
+
+                    <Label 
+                 Grid.Column="1"
+                 Text="Photos"
+                 FontSize="20"
+                 FontAttributes="Bold"
+                 HorizontalOptions="Start"
+                 VerticalOptions="Center"
+                 >
+
+                    </Label>
+                </Grid>
+                <Grid ColumnDefinitions="auto,*" ColumnSpacing="20">
+                    <Image 
+                 x:Name="Edit_video"
+                 Grid.Column="0"
+                 Source="video.png" 
+                 HeightRequest="35"
+                 WidthRequest="30"/>
+
+                    <Label 
+                 Grid.Column="1"
+                 Text="Videos"
+                 FontSize="20"
+                 FontAttributes="Bold"
+                 HorizontalOptions="Start"
+                 VerticalOptions="Center"
+                 >
+
+                    </Label>
+                </Grid>
+                <Grid ColumnDefinitions="auto,*" ColumnSpacing="20">
+                    <Image 
+                 Grid.Column="0"
+                 Source="friends.png" 
+                 HeightRequest="28"
+                 WidthRequest="30"/>
+
+                    <Label 
+                 Grid.Column="1"
+                 Text="Tag friends"
+                 FontSize="20"
+                 FontAttributes="Bold"
+                 HorizontalOptions="Start"
+                 VerticalOptions="Center"
+                 >
+
+                    </Label>
+                </Grid>
+                <Grid ColumnDefinitions="auto,*" ColumnSpacing="20">
+                    <Image 
+                 Grid.Column="0"
+                 Source="loca.png" 
+                 HeightRequest="28"
+                 WidthRequest="30"/>
+
+                    <Label 
+                 Grid.Column="1"
+                 Text="Add location"
+                 FontSize="20"
+                 FontAttributes="Bold"
+                 HorizontalOptions="Start"
+                 VerticalOptions="Center"
+                 >
+
+                    </Label>
+                </Grid>
+                <Grid ColumnDefinitions="auto,*" ColumnSpacing="20">
+                    <Image 
+                 Grid.Column="0"
+                 Source="unhappy.png" 
+                 HeightRequest="35"
+                 WidthRequest="30"/>
+
+                    <Label 
+                 Grid.Column="1"
+                 Text="Feeling/activities"
+                 FontSize="20"
+                 FontAttributes="Bold"
+                 HorizontalOptions="Start"
+                 VerticalOptions="Center"
+                 >
+
+                    </Label>
+                </Grid>
+            </VerticalStackLayout>
+
+
+
+            <Button 
+         x:Name="postbutton"
+         Clicked="postbutton_Clicked"
+         Text="POST"
+             HeightRequest="50"
+             FontSize="25"
+             FontAttributes="Bold"
+            
+             />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BrightChoices.ProfilePage"
+             Shell.NavBarIsVisible="False"
+             Title="ProfilePage">
+    <Grid RowDefinitions="*,auto">
+        <VerticalStackLayout Padding="10" Spacing="1"  Grid.Row="0">
+            <Frame HeightRequest="130" Padding="0">
+                <Image x:Name="CoverPc" Source="j.jpeg" WidthRequest="400" HeightRequest="400" />
+            </Frame>
+
+            <Frame 
+                Margin="0,-40,0,0"
+                BackgroundColor="White"
+                BorderColor="Transparent"
+                HeightRequest="100"
+                WidthRequest="100"
+                CornerRadius="50"
+            Padding="5"
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                x:Name="BottomMenu" 
+       >
+
+                <Frame
+            Margin="0,0,0,0"
+            Padding="-20"
+            BackgroundColor="White"
+            BorderColor="Transparent"
+            
+            CornerRadius="50"
+            >
+                    <Image x:Name="ProfilePC" Source="j.jpeg" WidthRequest="150" HeightRequest="100" />
+                </Frame>
+
+            </Frame>
+            
+            <Grid RowDefinitions="*,*" Margin="10" RowSpacing="10" HorizontalOptions="Center">
+                <Label x:Name="fullName" Text="Katty Abrahams" Grid.Row="0" FontAttributes="Bold" FontSize="20" HorizontalOptions="Center"/>
+                <Label x:Name="bio" TextColor="Gray" WidthRequest="250" Text="won't appear in the browser history and they won't leave other traces, like cookies, on the computer" Grid.Row="1" FontAttributes="Bold" FontSize="14" HorizontalOptions="Center"/>
+            </Grid>
+            <Grid ColumnDefinitions="*,*,*" Padding="-3" ColumnSpacing="10" HeightRequest="65">
+                <Frame Grid.Column="0" >
+                    <Grid RowDefinitions="*,*" Padding="0" RowSpacing="0">
+                        <Label Grid.Row="0" HorizontalOptions="Center" VerticalOptions="Start" FontAttributes="Bold" Text="567K"/>
+                        <Label Grid.Row="1" Margin="1" TextColor="Gray" FontSize="10" HorizontalOptions="Center" FontAttributes="Bold" Text="Followers"/>
+                    </Grid>
+                </Frame>
+                <Frame Grid.Column="1">
+                    <Grid RowDefinitions="*,*" Padding="0" RowSpacing="0">
+                        <Label Grid.Row="0" HorizontalOptions="Center" FontAttributes="Bold" Text="567K"/>
+                        <Label Grid.Row="1" Margin="1" TextColor="Gray" FontSize="10" HorizontalOptions="Center" FontAttributes="Bold" Text="Followings"/>
+                    </Grid>
+                </Frame>
+                <Frame Grid.Column="2">
+                    <Grid RowDefinitions="*,*" Padding="0" RowSpacing="0">
+                        <Label Grid.Row="0" HorizontalOptions="Center" FontAttributes="Bold" Text="567K"/>
+                        <Label Grid.Row="1" Margin="1" TextColor="Gray" FontSize="10" HorizontalOptions="Center" FontAttributes="Bold" Text="Post"/>
+                    </Grid>
+                </Frame>
+
+            </Grid>
+
+
+            <Grid ColumnDefinitions="*,*,*" Margin="10" Padding="0" ColumnSpacing="10" HeightRequest="40">
+                <Frame Grid.Column="0" Padding="0" BorderColor="Transparent" BackgroundColor="DeepSkyBlue"  CornerRadius="20" >
+
+                    <Label Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" Text="Follow"/>
+
+                </Frame>
+                <Frame Grid.Column="1" Padding="0" BorderColor="Transparent" BackgroundColor="DeepSkyBlue"  CornerRadius="20">
+                    <Label Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" Text="Message"/>
+
+                </Frame>
+                <Frame Grid.Column="2" Padding="0" BorderColor="Transparent" BackgroundColor="DeepSkyBlue"  CornerRadius="20">
+                    <Label Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" Text="Insight"/>
+                </Frame>
+
+            </Grid>
+
+
+        </VerticalStackLayout>
+        
+        
+        
+        <Frame  Grid.Row="0"
+                Loaded="Frame_Loaded"
+                BorderColor="Transparent"
+                BackgroundColor="Black"
+                HeightRequest="65"
+                WidthRequest="280"
+                CornerRadius="20"
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                Margin="20"
+               
+>
+            <Grid Padding="0" ColumnDefinitions="*,*,*,*">
+                <Image Source="home.png" WidthRequest="20" HeightRequest="20" Grid.Column="0"/>
+                <Image Source="heart.png" WidthRequest="20" HeightRequest="20" Grid.Column="1"/>
+                <Image Source="send.png" WidthRequest="20" HeightRequest="20" Grid.Column="2"/>
+                <Image Source="share.png" WidthRequest="20" HeightRequest="20" Grid.Column="3"/>
+            </Grid>
+        </Frame>
+    </Grid>
+</ContentPage>

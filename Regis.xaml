@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BrightChoices.Regis"
+             
+          Title="Registration options">
+    <ScrollView>
+        <VerticalStackLayout Spacing="0"
+     Padding="20,0">
+
+            <Grid Margin="0,20,0,0" ColumnSpacing="15">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid RowDefinitions="*,*">
+                    <Frame Grid.Row="0" HorizontalOptions="Start" BackgroundColor="Transparent"  WidthRequest="100" HeightRequest="100" CornerRadius="50">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                        </Frame.GestureRecognizers>
+                        <Image x:Name="ProfileImage" Source="camera.png" WidthRequest="120" HeightRequest="120"/>
+            
+                    </Frame>  
+                   
+                <Label Grid.Row="1" Text="Add a profile" FontSize="16" VerticalOptions="Center"/>
+                </Grid>    
+                <Image Grid.Column="1" Source="has.png" HeightRequest="200" WidthRequest="250"/>
+            </Grid>
+
+            <VerticalStackLayout Margin="0,20,0,0">
+                <Label Text="Full Name"/>
+                <StackLayout>
+                    <Entry x:Name="NameTx" Placeholder="Full Name" Margin="{OnPlatform Android='0,0', iOS='0,10'}"/>
+
+                </StackLayout>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Margin="0,20,0,0">
+                <Label Text="Email"/>
+                <StackLayout>
+                    <Entry x:Name="EmailTx" Placeholder="Enter Email" Margin="{OnPlatform Android='0,0', iOS='0,10'}"
+                        />
+
+                </StackLayout>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Margin="0,20,0,0">
+                <Label Text="Age"/>
+                <StackLayout>
+                    <Entry x:Name="AgeTx" Placeholder="Age" Margin="{OnPlatform Android='0,0', iOS='0,10'}"
+               />
+
+                </StackLayout>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Margin="0,20,0,0">
+                <Label Text="Gender"/>
+                <StackLayout>
+                    <Entry x:Name="GenderTx" Placeholder="Gender" Margin="{OnPlatform Android='0,0', iOS='0,10'}"
+               />
+
+                </StackLayout>
+            </VerticalStackLayout>
+
+            
+
+
+            <VerticalStackLayout Margin="0,20,0,0">
+                
+            <Label Text="Phone Number"/>
+            <StackLayout>
+                <Entry x:Name="PhoneTx" Placeholder="Phone Number" Margin="{OnPlatform Android='0,0', iOS='0,10'}"
+            />
+
+            </StackLayout>
+        </VerticalStackLayout>
+
+            <VerticalStackLayout Margin="0,20,0,0">
+                <Label Text="Bio"/>
+                <StackLayout>
+                    <Editor x:Name="BioTx" Placeholder="Bio" Margin="{OnPlatform Android='0,0', iOS='0,10'}"
+                />
+                </StackLayout>
+            </VerticalStackLayout>
+            <VerticalStackLayout Margin="0,20,0,0"/>
+
+
+            <VerticalStackLayout Margin="0,20,0,0">
+                <Label Text="password"/>
+                <StackLayout>
+                    <Entry x:Name="PasswordTx" IsPassword="True" Placeholder="Enter password" Margin="{OnPlatform Android='0,0', iOS='0,10'}"
+              />
+
+                </StackLayout>
+            </VerticalStackLayout>
+
+            
+
+            <VerticalStackLayout Margin="0,20,0,0">
+                <Label Text="confirm password"/>
+                <StackLayout>
+                    <Entry x:Name="ConpassTx" IsPassword="True" Placeholder="Enter password" Margin="{OnPlatform Android='0,0', iOS='0,10'}"
+             />
+
+                </StackLayout>
+            </VerticalStackLayout>
+            
+            <Button Margin="0,20,0,0" x:Name="logInBtn" Clicked="logInBtn_Clicked"  Text="Create!" CornerRadius="20" BackgroundColor="SkyBlue" TextColor="White"/>
+            <ActivityIndicator IsRunning="True" x:Name="indicate"/>
+            <Label x:Name="loginLB" Margin="0,15,0,0" Text="Have an account? Log In Now" FontSize="40" HorizontalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+
+            <Grid Margin="0,50,0,0" ColumnSpacing="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <BoxView Grid.Column="0" HeightRequest="1" Color="Black"/>
+                <Label Grid.Column="1" Text="User other method"  FontSize="12" HorizontalOptions="Center"/>
+                <BoxView Grid.Column="2" HeightRequest="1" Color="Black"/>
+            </Grid>
+
+            <HorizontalStackLayout Margin="0,15,0,0" Spacing="15" HorizontalOptions="Center"/>
+            <Grid  HorizontalOptions="Center" ColumnSpacing="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Image Source="login.png" Grid.Column="0" WidthRequest="35" HeightRequest="35"/>
+                <!--<Label x:Name="google Icon" Text="Home" Grid.Column="1" FontFamily="Icon"/>-->
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
