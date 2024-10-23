@@ -20,6 +20,7 @@ public partial class Forum : ContentPage
         firebase = fibaseobj;
         DataFromFirebase.Clear();
         PostFromFirebase.Clear();
+
         Data_Reader();
         Post_Reader();
         Profile_Ready();
@@ -34,7 +35,7 @@ public partial class Forum : ContentPage
         if (MainPage.ImagePro != null) { 
         var stream = new MemoryStream(MainPage.ImagePro);
         profileTx.Source = ImageSource.FromStream(() => stream);
-        userTx.Text = MainPage.usernames;
+        userTx.Text = MainPage.fullname;
     } 
     }
         
@@ -121,6 +122,16 @@ public partial class Forum : ContentPage
 
     private void TapGestureRecognizer_Tapped_1(object sender, TappedEventArgs e)
     {
-        Navigation.PushAsync(new ProfilePage());
+        Navigation.PushAsync(new ProfilePage(firebase));
+    }
+
+    private void TapGestureRecognizer_Tapped_2(object sender, TappedEventArgs e)
+    {
+        Navigation.PushAsync(new learning());
+    }
+
+    private void TapGestureRecognizer_Tapped_3(object sender, TappedEventArgs e)
+    {
+
     }
 }

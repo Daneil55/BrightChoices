@@ -2,11 +2,12 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              Shell.NavBarIsVisible="False"
+             BackgroundColor="#fff"
              x:Class="BrightChoices.MainPage">
             
     <ContentPage.Content>
-        <ScrollView>
-        <VerticalStackLayout Spacing="0"
+        <ScrollView BackgroundColor="#fff">
+        <VerticalStackLayout BackgroundColor="#fff" Spacing="0"
             Padding="20,0">
 
             <Grid Margin="0,20,0,0" ColumnSpacing="15">
@@ -23,7 +24,6 @@
                 <Label Text="Email"/>
                 <StackLayout>
                     <Entry x:Name="EmailTx" Placeholder="Enter Email" Margin="{OnPlatform Android='0,0', iOS='0,10'}"/>
-                 
                 </StackLayout>
             </VerticalStackLayout>
 
@@ -62,7 +62,7 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <Image Source="login.png" Grid.Column="0" WidthRequest="35" HeightRequest="35"/>
-                 <Image Source="def.webp" Grid.Column="1" WidthRequest="35" HeightRequest="35"/>
+                 <Image Source="search.png" Grid.Column="1" WidthRequest="35" HeightRequest="35"/>
             </Grid>
             <HorizontalStackLayout/>
 

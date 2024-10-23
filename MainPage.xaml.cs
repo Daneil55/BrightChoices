@@ -14,6 +14,7 @@ namespace BrightChoices
         {
             
             InitializeComponent();
+            Navigation.PushAsync(new LearningProgress());
             registrations.Clear();
             firebase = fibaseobj;
             Data_Reader();

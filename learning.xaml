@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:tools="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="BrightChoices.learning"
+             Shell.NavBarIsVisible="False"
+             Title="learning">
+   
+        <Grid RowDefinitions="*, auto">
+        <ScrollView>
+            <StackLayout BackgroundColor="White">
+
+                <Frame Margin="20,70,20,20"  WidthRequest="300" HorizontalOptions="Center" VerticalOptions="Start">
+
+            <Grid  ColumnDefinitions="*,*">
+                <Frame HorizontalOptions="Start" Grid.Column="0" WidthRequest="45" HeightRequest="45">
+                    
+                    <Image Source="j.jpeg" WidthRequest="70" HeightRequest="70"/>
+                </Frame>
+                <Grid Grid.Column="1">
+                <Label HorizontalOptions="Center" VerticalOptions="Center" Text="My learning"/>
+                </Grid>
+            </Grid>
+                
+
+
+        </Frame>
+      
+            <StackLayout>
+        <Frame Margin="20,20,20,20" Padding="-5" HasShadow="True" HeightRequest="340" WidthRequest="300" HorizontalOptions="Center" VerticalOptions="Start">
+
+            <Grid Padding="2"  RowDefinitions="3.7*,*">
+                <Frame Grid.Row="0">
+                            <Image Source="j.jpeg" WidthRequest="410" HeightRequest="410"/>
+
+                            <!--<tools:MediaElement
+                                x:Name="toolvideo"
+                                Source="https://www.youtube.com/watch?v=Hh279ES_FNQ&list=PLdo4fOcmZ0oUBAdL2NwBpDs32zwGqb9DY"
+                                WidthRequest="360" 
+                                HeightRequest="360"
+                            />-->
+
+                </Frame>
+                <Grid Padding="7" RowDefinitions="*,*,*,*" Grid.Row="1">
+                    <Label Grid.Row="0"  FontAttributes="Bold" HorizontalOptions="Center" TextColor="Green" VerticalOptions="Start" Text="Learn C#"/>
+                    <Label Grid.Row="1"  HorizontalOptions="Start" VerticalOptions="Start" Text="Create mobile Application with C#"/>
+                    <Label Grid.Row="2"  HorizontalOptions="Start" VerticalOptions="Start" Text="Create DeskTop Application with C#"/>
+                    <Label Grid.Row="3"  HorizontalOptions="Start" VerticalOptions="Start" Text="Create Web Application with C#"/>
+                    
+                </Grid>
+            </Grid>
+
+
+
+        </Frame>
+                    <Frame Margin="20" Padding="-5" HasShadow="True" HeightRequest="340" WidthRequest="300" HorizontalOptions="Center" VerticalOptions="Start">
+
+                        <Grid Padding="2"  RowDefinitions="3.7*,*">
+                            <Frame Grid.Row="0">
+                                <Image Source="j.jpeg" WidthRequest="410" HeightRequest="410"/>
+
+                                <!--<tools:MediaElement
+                                x:Name="toolvideo"
+                                Source="https://www.youtube.com/watch?v=Hh279ES_FNQ&list=PLdo4fOcmZ0oUBAdL2NwBpDs32zwGqb9DY"
+                                WidthRequest="360" 
+                                HeightRequest="360"
+                            />-->
+
+                            </Frame>
+                            <Grid Padding="7" RowDefinitions="*,*,*,*" Grid.Row="1">
+                                <Label Grid.Row="0"  FontAttributes="Bold" HorizontalOptions="Center" TextColor="Green" VerticalOptions="Start" Text="Learn C#"/>
+                                <Label Grid.Row="1"  HorizontalOptions="Start" VerticalOptions="Start" Text="Create mobile Application with C#"/>
+                                <Label Grid.Row="2"  HorizontalOptions="Start" VerticalOptions="Start" Text="Create DeskTop Application with C#"/>
+                                <Label Grid.Row="3"  HorizontalOptions="Start" VerticalOptions="Start" Text="Create Web Application with C#"/>
+
+                            </Grid>
+                        </Grid>
+
+
+
+                    </Frame>
+                    <Frame Margin="20" Padding="-5" HasShadow="True" HeightRequest="340" WidthRequest="300" HorizontalOptions="Center" VerticalOptions="Start">
+
+                        <Grid Padding="2"  RowDefinitions="3.7*,*">
+                            <Frame Grid.Row="0">
+                                <Image Source="j.jpeg" WidthRequest="410" HeightRequest="410"/>
+
+                                <!--<tools:MediaElement
+                                x:Name="toolvideo"
+                                Source="https://www.youtube.com/watch?v=Hh279ES_FNQ&list=PLdo4fOcmZ0oUBAdL2NwBpDs32zwGqb9DY"
+                                WidthRequest="360" 
+                                HeightRequest="360"
+                            />-->
+
+                            </Frame>
+                            <Grid Padding="7" RowDefinitions="*,*,*,*" Grid.Row="1">
+                                <Label Grid.Row="0"  FontAttributes="Bold" HorizontalOptions="Center" TextColor="Green" VerticalOptions="Start" Text="Learn C#"/>
+                                <Label Grid.Row="1"  HorizontalOptions="Start" VerticalOptions="Start" Text="Create mobile Application with C#"/>
+                                <Label Grid.Row="2"  HorizontalOptions="Start" VerticalOptions="Start" Text="Create DeskTop Application with C#"/>
+                                <Label Grid.Row="3"  HorizontalOptions="Start" VerticalOptions="Start" Text="Create Web Application with C#"/>
+
+                            </Grid>
+                        </Grid>
+
+
+
+                    </Frame>
+                    <Frame Margin="20" Padding="-5" HasShadow="True" HeightRequest="340" WidthRequest="300" HorizontalOptions="Center" VerticalOptions="Start">
+
+                        <Grid Padding="2"  RowDefinitions="3.7*,*">
+                            <Frame Grid.Row="0">
+                                <Image Source="j.jpeg" WidthRequest="410" HeightRequest="410"/>
+
+                                <!--<tools:MediaElement
+                                x:Name="toolvideo"
+                                Source="https://www.youtube.com/watch?v=Hh279ES_FNQ&list=PLdo4fOcmZ0oUBAdL2NwBpDs32zwGqb9DY"
+                                WidthRequest="360" 
+                                HeightRequest="360"
+                            />-->
+
+                            </Frame>
+                            <Grid Padding="7" RowDefinitions="*,*,*,*" Grid.Row="1">
+                                <Label Grid.Row="0"  FontAttributes="Bold" HorizontalOptions="Center" TextColor="Green" VerticalOptions="Start" Text="Learn C#"/>
+                                <Label Grid.Row="1"  HorizontalOptions="Start" VerticalOptions="Start" Text="Create mobile Application with C#"/>
+                                <Label Grid.Row="2"  HorizontalOptions="Start" VerticalOptions="Start" Text="Create DeskTop Application with C#"/>
+                                <Label Grid.Row="3"  HorizontalOptions="Start" VerticalOptions="Start" Text="Create Web Application with C#"/>
+
+                            </Grid>
+                        </Grid>
+
+
+
+                    </Frame>
+                    <Frame Margin="20" Padding="-5" HasShadow="True" HeightRequest="340" WidthRequest="300" HorizontalOptions="Center" VerticalOptions="Start">
+
+                        <Grid Padding="2"  RowDefinitions="3.7*,*">
+                            <Frame Grid.Row="0">
+                                <Image Source="j.jpeg" WidthRequest="410" HeightRequest="410"/>
+
+                                <!--<tools:MediaElement
+                                x:Name="toolvideo"
+                                Source="https://www.youtube.com/watch?v=Hh279ES_FNQ&list=PLdo4fOcmZ0oUBAdL2NwBpDs32zwGqb9DY"
+                                WidthRequest="360" 
+                                HeightRequest="360"
+                            />-->
+
+                            </Frame>
+                            <Grid Padding="7" RowDefinitions="*,*,*,*" Grid.Row="1">
+                                <Label Grid.Row="0"  FontAttributes="Bold" HorizontalOptions="Center" TextColor="Green" VerticalOptions="Start" Text="Learn C#"/>
+                                <Label Grid.Row="1"  HorizontalOptions="Start" VerticalOptions="Start" Text="Create mobile Application with C#"/>
+                                <Label Grid.Row="2"  HorizontalOptions="Start" VerticalOptions="Start" Text="Create DeskTop Application with C#"/>
+                                <Label Grid.Row="3"  HorizontalOptions="Start" VerticalOptions="Start" Text="Create Web Application with C#"/>
+
+                            </Grid>
+                        </Grid>
+
+
+
+                    </Frame>
+                </StackLayout>
+        
+    </StackLayout>
+        </ScrollView>
+        <Frame  Grid.Row="0"
+                
+                BorderColor="Transparent"
+                BackgroundColor="SkyBlue"
+                HeightRequest="65"
+                WidthRequest="280"
+                CornerRadius="20"
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                Margin="20"
+               
+>
+                <Grid Padding="0" ColumnDefinitions="*,*,*,*">
+                    <Image Source="home.png" WidthRequest="20" HeightRequest="20" Grid.Column="0"/>
+                    <Image Source="heart.png" WidthRequest="20" HeightRequest="20" Grid.Column="1"/>
+                    <Image Source="send.png" WidthRequest="20" HeightRequest="20" Grid.Column="2"/>
+                    <Image Source="share.png" WidthRequest="20" HeightRequest="20" Grid.Column="3"/>
+                </Grid>
+            </Frame>
+
+        <Frame HeightRequest="50" BorderColor="Transparent" Grid.Row="0" VerticalOptions="Start" Margin="0" Padding="0" >
+            <Grid  ColumnDefinitions="*,*,*">
+                <Frame HorizontalOptions="Start" Grid.Column="0" WidthRequest="45" HeightRequest="45">
+                    <Image Source="j.jpeg" WidthRequest="70" HeightRequest="70"/>
+                </Frame>
+                <Label HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="1" Text="Full Name"/>
+                <Frame Margin="5" HorizontalOptions="End" Grid.Column="2" WidthRequest="45" HeightRequest="45">
+                    <Image Source="j.jpeg" WidthRequest="70" HeightRequest="70"/>
+                </Frame>
+            </Grid>
+        </Frame>
+
+    </Grid>
+    
+</ContentPage>

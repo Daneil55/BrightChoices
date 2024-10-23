@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-              xmlns:byteToListImage="clr-namespace:ImageReader_fromD_toList"
+             xmlns:byteToListImage="clr-namespace:ImageReader_fromD_toList"
+             xmlns:DateTimeCVT="clr-namespace:DateTimeConveterNameSpace"
              x:Class="BrightChoices.Forum"
              Shell.NavBarIsVisible="False"
              Title="Forum">
@@ -9,6 +10,7 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <byteToListImage:ByteToListImage  x:Key="ByteArrayToImage"/>
+            <DateTimeCVT:DateTimeConveter  x:Key="DateToTime"/>
         </ResourceDictionary>
     </ContentPage.Resources>
     <Grid RowDefinitions="*,auto">
@@ -22,7 +24,7 @@
                         <Image Source="has.png" Aspect="Fill" HeightRequest="80" WidthRequest="80" />
 
                     </Frame>
-                    <Label Text="@username" WidthRequest="200" x:Name="userTx" VerticalOptions="Center" HorizontalOptions="Center" TextColor="Black" FontSize="18" FontAttributes="Bold" Grid.Column="1"/>
+                    <Label Text="@username" Margin="5" WidthRequest="200" x:Name="userTx" VerticalOptions="Center" HorizontalOptions="Center" TextColor="Black" FontSize="18" FontAttributes="Bold" Grid.Column="1"/>
                     <Frame  Grid.Column="2" CornerRadius="50" WidthRequest="50" HeightRequest="50" HorizontalOptions="End">
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
@@ -41,7 +43,7 @@
                         <Grid ColumnSpacing="20" RowDefinitions="2*,*">
                            
                             <Frame Margin="5" CornerRadius="50" WidthRequest="80" HeightRequest="80" BorderColor="Black" Grid.Row="0" Padding="0">
-                                <Image x:Name="imagex" Source="{Binding profileimage, Converter={StaticResource ByteArrayToImage}}" WidthRequest="170" HeightRequest="200" />
+                                <Image x:Name="imagex" Source="{Binding profileimage, Converter = {StaticResource ByteArrayToImage}}" WidthRequest="170" HeightRequest="200" />
                             </Frame>
                            
                             <Label x:Name="namex" HorizontalOptions="Center" FontSize="15" FontAttributes="Bold" Grid.Row="1"  Text="{Binding FullName}" />
@@ -56,43 +58,44 @@
         </Frame>
 
 
-            <Frame Grid.Row="3" HeightRequest="600" Padding="0">
+            <Grid Grid.Row="3" HeightRequest="570" Padding="1">
 
                 <CollectionView x:Name="ListV" ItemsSource="{Binding PostFromFirebase}" >
 
             <CollectionView.ItemTemplate >
                 <DataTemplate >
-                        <Grid>
-                    <Frame Grid.Row="2" Margin="5" CornerRadius="45">
+                <Grid>
+                        <Frame Margin="2" Padding="10" HasShadow="True" BorderColor="Transparent" CornerRadius="25">
+                    <Grid Grid.Row="2"  Margin="5">
                             
-            <Grid  Margin="-20" BackgroundColor="Beige">
-                                        <Image Source="{Binding postimage, Converter={StaticResource ByteArrayToImage}}"  Aspect="AspectFill" />
+            <Grid  Margin="-20" BackgroundColor="Transparent">
+                   <Image Source="{Binding postimage, Converter={StaticResource ByteArrayToImage}}"  Aspect="AspectFill" />
 
 
                  <Grid RowDefinitions="65, 2*, 145" Margin="0" BackgroundColor="Transparent" Padding="5" >
 
-                    <Frame Grid.Row="0" HorizontalOptions="Start" Loaded="ColorFrame_Loaded" Padding="1" BorderColor="Transparent" BackgroundColor="#D3D3D3" x:Name="ColorFrame" WidthRequest="250" CornerRadius="30">
+                    <Frame Grid.Row="0" HorizontalOptions="Start" Loaded="ColorFrame_Loaded" Padding="1" BorderColor="Transparent" Margin="5" BackgroundColor="#D3D3D3" x:Name="ColorFrame" WidthRequest="250" CornerRadius="30">
                         <Grid ColumnDefinitions="45,*" Margin="0" ColumnSpacing="0"  Padding="5" >
-                         <Frame Grid.Column="0"  Padding="0" Margin="10" BackgroundColor="Transparent" BorderColor="Transparent" HeightRequest="50" WidthRequest="50" CornerRadius="110" >
+                         <Frame Grid.Column="0"   Padding="0" Margin="10" BackgroundColor="Transparent" BorderColor="Transparent" HeightRequest="50" WidthRequest="50" CornerRadius="110" >
 
                                                         <Image Source="{Binding posterImage, Converter={StaticResource ByteArrayToImage}}" Aspect="Fill"  />
                             </Frame>
-                             <Grid RowDefinitions="*,*" RowSpacing="0" Grid.Column="1 " Margin="-5" HorizontalOptions="Center">
-                                    <Label Text="{Binding posterName}"  TextColor="White" FontSize="17" FontAttributes="Bold" Grid.Row="0" VerticalOptions="Start" HorizontalOptions="Center" />
+                             <VerticalStackLayout Padding="-5" Spacing="2" WidthRequest="150" Grid.Column="1 " Margin="5" HorizontalOptions="Center">
+                                    <Label Text="{Binding posterName}"  TextColor="White" FontSize="17" FontAttributes="Bold" VerticalOptions="Start" HorizontalOptions="Center"  />
 
-                                                        <Label Text="{Binding posterUsername}" WidthRequest="150" HeightRequest="10" TextColor="White" FontSize="15"  Grid.Row="1" VerticalOptions="Start" HorizontalOptions="Start" />
+                                    <Label Text="{Binding date, Converter={StaticResource DateToTime}}" TextColor="White" FontSize="15"   VerticalOptions="Start" HorizontalOptions="Center" />
 
-                            </Grid>   
+                            </VerticalStackLayout>   
                         </Grid>
                     </Frame>
-                    <Frame Grid.Row="2" VerticalOptions="End" Padding="0" HasShadow="True" BorderColor="Transparent" x:Name="CommentForm" Loaded="CommentForm_Loaded" BackgroundColor="Transparent" HeightRequest="100">
+                    <Frame Grid.Row="2" VerticalOptions="End" Padding="0" HasShadow="True" BorderColor="Transparent" x:Name="CommentForm" Loaded="CommentForm_Loaded" BackgroundColor="Transparent" HeightRequest="140">
                                                 <Grid RowDefinitions="*,*">
                                                     <Frame BorderColor="Transparent" BackgroundColor="Transparent" Grid.Row="0">
                                                         <Grid ColumnSpacing="2" Padding="0" ColumnDefinitions="*,*,*,*,*,*">
                                                             <Image Grid.Column="0" HorizontalOptions="Start" WidthRequest="30" HeightRequest="30" Source="heart.png"/>
                                                             <Label Grid.Column="1" Text="{Binding like}" HorizontalOptions="Start" TextColor="White" FontSize="Body" WidthRequest="30" HeightRequest="20"/>
 
-                                                            <Image Grid.Column="2" HorizontalOptions="Start" WidthRequest="30" HeightRequest="30" Source="comment.png"/>
+                                                            <Image Grid.Column="2" HorizontalOptions="Start" WidthRequest="30" HeightRequest="70" Source="comment.png"/>
                                                             <Label Grid.Column="3" Text="{Binding like}" HorizontalOptions="Start" TextColor="White" FontSize="Body" WidthRequest="30" HeightRequest="20"/>
 
                                                             <Image Grid.Column="4" HorizontalOptions="Start" WidthRequest="30" HeightRequest="30" Source="send.png"/>
@@ -113,12 +116,13 @@
 
 
             </Grid>
-        </Frame>
-                        </Grid>
+        </Grid>
+                        </Frame>
+</Grid>
                     </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-            </Frame>
+            </Grid>
 
 
             <ActivityIndicator IsRunning="True" VerticalOptions="End" Grid.Row="2"/>
@@ -138,9 +142,19 @@
                 x:Name="BottomMenu" 
 >
             <Grid Padding="5" ColumnDefinitions="*,*,*,*">
-                <Image Source="home.png" WidthRequest="20" HeightRequest="20" Grid.Column="0"/>
-                <Image Source="heart.png" WidthRequest="20" HeightRequest="20" Grid.Column="1"/>
-                <Image Source="send.png" WidthRequest="20" HeightRequest="20" Grid.Column="2"/>
+                <Image Source="home.png" WidthRequest="30" HeightRequest="20" Grid.Column="0" />
+
+                <Image Source="heart.png" WidthRequest="20" HeightRequest="20" Grid.Column="1">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="readingbook.png" WidthRequest="20" HeightRequest="20" Grid.Column="2">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                
                 <Image Source="share.png" WidthRequest="20" HeightRequest="20" Grid.Column="3">
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>

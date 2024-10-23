@@ -1,5 +1,7 @@
 ﻿using Firebase.Database;
 using Microsoft.Extensions.Logging;
+using CommunityToolkit.Maui;
+using CommunityToolkit.Maui.Maps;
 
 namespace BrightChoices
 {
@@ -10,6 +12,7 @@ namespace BrightChoices
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .UseMauiCommunityToolkitMediaElement()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
