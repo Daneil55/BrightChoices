@@ -60,10 +60,12 @@
 	  <None Remove="Resources\Fonts\JosefinSans-Italic-VariableFont_wght.ttf" />
 	  <None Remove="Resources\Fonts\JosefinSans-VariableFont_wght.ttf" />
 	  <None Remove="Resources\Fonts\shapes.ttf" />
+	  <None Remove="Resources\Images\add.png" />
 	  <None Remove="Resources\Images\Camera.png" />
 	  <None Remove="Resources\Images\comment.png" />
 	  <None Remove="Resources\Images\editicons.png" />
 	  <None Remove="Resources\Images\education.jpg" />
+	  <None Remove="Resources\Images\friend.png" />
 	  <None Remove="Resources\Images\google.jpeg" />
 	  <None Remove="Resources\Images\has.png" />
 	  <None Remove="Resources\Images\heart.png" />
@@ -74,10 +76,13 @@
 	  <None Remove="Resources\Images\j.jpeg" />
 	  <None Remove="Resources\Images\login.png" />
 	  <None Remove="Resources\Images\magnifier.png" />
+	  <None Remove="Resources\Images\mate.png" />
 	  <None Remove="Resources\Images\notification.png" />
+	  <None Remove="Resources\Images\notifications.png" />
 	  <None Remove="Resources\Images\readingbook.png" />
 	  <None Remove="Resources\Images\search.png" />
 	  <None Remove="Resources\Images\send.png" />
+	  <None Remove="Resources\Images\settings.png" />
 	  <None Remove="Resources\Images\share.png" />
 	  <None Remove="Resources\Images\videoplayer.png" />
 	</ItemGroup>
@@ -97,6 +102,9 @@
 	  <MauiXaml Update="AccountList.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="certificate.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Forum.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -104,6 +112,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="LearningProgress.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="LossonsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Newacconte1.xaml">

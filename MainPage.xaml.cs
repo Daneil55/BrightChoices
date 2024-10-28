@@ -14,7 +14,7 @@ namespace BrightChoices
         {
             
             InitializeComponent();
-            Navigation.PushAsync(new LearningProgress());
+            Navigation.PushAsync(new learning());
             registrations.Clear();
             firebase = fibaseobj;
             Data_Reader();
@@ -33,6 +33,10 @@ namespace BrightChoices
             if (login(EmailTx.Text, PasswordTx.Text))
             {
                 Navigation.PushAsync(new Forum(firebase));
+            }
+            else
+            {
+                DisplayAlert("Alert", "Account Not Found", "Cancel");
             }
         
         }

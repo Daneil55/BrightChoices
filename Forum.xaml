@@ -14,18 +14,30 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <Grid RowDefinitions="*,auto">
-        <Grid RowSpacing="5" Grid.Row="0" ColumnSpacing="5" RowDefinitions="100,120,auto" Padding="5">
+        <Grid RowSpacing="5" Grid.Row="0" ColumnSpacing="5" RowDefinitions="100,120,auto" Padding="0">
 
         <Frame Grid.Row="0" BorderColor="White">
-            <Grid ColumnDefinitions="2*, auto, 2*">
+            <Grid ColumnDefinitions="2*, auto,2*,2*,2*">
         
                     <Frame Grid.Column="0" BorderColor="White" WidthRequest="50" HeightRequest="50" HorizontalOptions="Start">
 
                         <Image Source="has.png" Aspect="Fill" HeightRequest="80" WidthRequest="80" />
 
                     </Frame>
-                    <Label Text="@username" Margin="5" WidthRequest="200" x:Name="userTx" VerticalOptions="Center" HorizontalOptions="Center" TextColor="Black" FontSize="18" FontAttributes="Bold" Grid.Column="1"/>
-                    <Frame  Grid.Column="2" CornerRadius="50" WidthRequest="50" HeightRequest="50" HorizontalOptions="End">
+                    <Label Text="Bright Choices" Margin="10" TextColor ="#85C9Ef" WidthRequest="200"  x:Name="userTx" VerticalOptions="Center" HorizontalOptions="Center" FontSize="18" FontAttributes="Bold" Grid.Column="1"/>
+                    <Frame  Grid.Column="2" CornerRadius="50" Margin="15" BorderColor="Transparent" WidthRequest="50" HeightRequest="50" HorizontalOptions="End">
+                        
+                        <Image Source="notifications.png" x:Name="noti" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="20" HeightRequest="20" Aspect="Fill" />
+
+                    </Frame>
+                
+                    <Frame  Grid.Column="3" CornerRadius="50" BorderColor="Transparent" Margin="15" WidthRequest="50" HeightRequest="50" HorizontalOptions="End">
+                        
+                        <Image Source="friend.png" x:Name="frend" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="25" HeightRequest="25" Aspect="Fill" />
+
+                    </Frame>
+                
+                    <Frame  Grid.Column="4" CornerRadius="50" WidthRequest="50" HeightRequest="50" HorizontalOptions="End">
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
                         </Frame.GestureRecognizers>
@@ -136,26 +148,30 @@
                 HeightRequest="65"
                 WidthRequest="280"
                 CornerRadius="20"
+                Padding="0"
                 HorizontalOptions="Center"
                 VerticalOptions="End"
                 Margin="20"
                 x:Name="BottomMenu" 
 >
-            <Grid Padding="5" ColumnDefinitions="*,*,*,*">
+            <Grid Padding="0" ColumnDefinitions="*,*,*,*,*">
                 <Image Source="home.png" WidthRequest="30" HeightRequest="20" Grid.Column="0" />
 
-                <Image Source="heart.png" WidthRequest="20" HeightRequest="20" Grid.Column="1">
+                <Image Source="settings.png" WidthRequest="20" HeightRequest="20" Grid.Column="1">
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3"/>
                     </Image.GestureRecognizers>
                 </Image>
-                <Image Source="readingbook.png" WidthRequest="20" HeightRequest="20" Grid.Column="2">
+
+                <Image Source="add.png" WidthRequest="50"  HeightRequest="40" Grid.Column="2" />
+
+                <Image Source="readingbook.png" WidthRequest="20" HeightRequest="20" Grid.Column="3">
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2"/>
                     </Image.GestureRecognizers>
                 </Image>
                 
-                <Image Source="share.png" WidthRequest="20" HeightRequest="20" Grid.Column="3">
+                <Image Source="magnifier.png" WidthRequest="20" HeightRequest="20" Grid.Column="4">
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
                     </Image.GestureRecognizers>   

@@ -6,4 +6,9 @@ public partial class learning : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void CardBtn1_Clicked(object sender, EventArgs e)
+    {
+		Navigation.PushAsync(new LearningProgress());
+    }
 }

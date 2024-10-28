@@ -106,7 +106,7 @@
                                             <Image Source="{Binding postimage, Converter={StaticResource ByteArrayToImage}}"  Aspect="AspectFill" />
 
 
-                                            <Grid RowDefinitions="65, 2*, 145" Margin="0" BackgroundColor="Transparent" Padding="5" >
+                                            <Grid RowDefinitions="65, 2*, 145" Margin="0" BackgroundColor="Transparent" Padding="5">
 
                                                 <Frame Grid.Row="0" HorizontalOptions="Start" Loaded="ColorFrame_Loaded" Padding="1" BorderColor="Transparent" Margin="5" BackgroundColor="#D3D3D3" x:Name="ColorFrame" WidthRequest="250" CornerRadius="30">
                                                     <Grid ColumnDefinitions="45,*" Margin="0" ColumnSpacing="0"  Padding="5" >
