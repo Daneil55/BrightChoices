@@ -47,7 +47,6 @@ public partial class MessangerPage : ContentPage
                     {
                         if (lists[i].MessageOwner == Forum.usernames || lists[i].Messanger == Forum.usernames)
                         {
-
                             PostFromFirebase.Add(lists[i]);
                         }
                     }
