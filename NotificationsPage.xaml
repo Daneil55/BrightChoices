@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BrightChoices.NotificationsPage"
+             Title="NotificationsPage">
+    <StackLayout Padding="10">
+
+        <Label Text="Notifications" 
+               FontSize="24" 
+               HorizontalOptions="Center" 
+               Margin="0,20" />
+
+        <ListView x:Name="NotificationsListView"
+                  HasUnevenRows="True"
+                  ItemsSource="{Binding Notifications}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="10" 
+                                     BackgroundColor="{Binding IsRead, Converter={StaticResource ReadStatusConverter}}">
+                            <Label Text="{Binding Title}" 
+                                   FontAttributes="Bold" />
+                            <Label Text="{Binding Message}" 
+                                   LineBreakMode="WordWrap" />
+                            <Label Text="{Binding Timestamp, StringFormat='{}{0:hh:mm tt}'}" 
+                                   FontSize="12" 
+                                   TextColor="Gray" 
+                                   HorizontalOptions="End" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button Text="Clear All"
+                Command="{Binding ClearAllNotificationsCommand}" 
+                Margin="0,10,0,0" />
+
+    </StackLayout>
+</ContentPage>

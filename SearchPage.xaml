@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BrightChoices.SearchPage"
+             Title="SearchPage">
+    
+    <Grid RowDefinitions="45,45,*" RowSpacing="5" Padding="5">
+        <SearchBar x:Name="SearchBar" HeightRequest="10" VerticalOptions="Start" BackgroundColor="AliceBlue" Grid.Row="0" Placeholder="Search for Media, People, Web..." TextChanged="SearchBar_TextChanged"/>
+        <Grid Grid.Row="1"  ColumnDefinitions="*,*,*">
+            <Button Grid.Column="1" Text="Media" HeightRequest="5" HorizontalOptions="Start" BackgroundColor="SkyBlue"/>
+            <Button Grid.Column="0" Text="People" HeightRequest="5" HorizontalOptions="Start" BackgroundColor="SkyBlue"/>
+            <Button Grid.Column="2" Text="Web" HeightRequest="5" HorizontalOptions="Start" BackgroundColor="SkyBlue"/>
+        </Grid>
+        <CollectionView Grid.Row="2">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+       
+    </Grid>
+</ContentPage>

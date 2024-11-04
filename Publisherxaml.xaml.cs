@@ -1,11 +1,14 @@
 using BrightChoices.Models;
 using Firebase.Database;
 using Firebase.Database.Query;
+using Plugin.Maui.Audio;
 
 namespace BrightChoices;
 
 public partial class Publisherxaml : ContentPage
 {
+    
+
     private readonly FirebaseClient firebase;
     public Publisherxaml(FirebaseClient fibaseobj)
 	{
@@ -31,7 +34,7 @@ public partial class Publisherxaml : ContentPage
         }
     }
 
-
+    private readonly IAudioManager audioz;
     public void server(int ids, byte[] images, byte[] postimages, string fullnames, string emails, string usernames, string texts, int postids, byte[] audios, byte[] videos, string comments, int likes, int shares)
     {
        
@@ -48,13 +51,14 @@ public partial class Publisherxaml : ContentPage
             postimage = postimages,
             postVideo = video,
             postaudio = video,                   
-            like = 5,
+            like = "Non",
             comment = comments,
             share = 5           
         });
 
         DisplayAlert("Message", "Posted", "ok");
-        Navigation.PushAsync(new Forum(firebase));
+
+        Navigation.PushAsync(new Forum(firebase, audioz));
     }
 
     public static string Imagelink;

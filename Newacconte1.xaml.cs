@@ -1,4 +1,5 @@
 using Firebase.Database;
+using Plugin.Maui.Audio;
 using System.Security.Cryptography.X509Certificates;
 
 namespace BrightChoices;
@@ -32,8 +33,10 @@ public partial class Newacconte1 : ContentPage
 		
     }
 
+    private readonly IAudioManager audio;
+
     private void Save_Clicked(object sender, EventArgs e)
     {
-		Navigation.PushAsync(new Forum(firebase));
+		Navigation.PushAsync(new Forum(firebase, audio));
     }
 }

@@ -20,7 +20,7 @@ namespace BrightChoices.Models
         public byte[] postimage { get; set; } 
         public byte[] postVideo { get; set; }
         public byte[] postaudio { get; set; }
-        public int like { get; set; } 
+        public string like { get; set; }
         public string comment {  get; set; }
         public int share { get; set; } 
 

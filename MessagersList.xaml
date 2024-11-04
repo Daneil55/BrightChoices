@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BrightChoices.MessagersList"
+             Title="MessagersList">
+    <Grid RowDefinitions="*, auto">
+        <ScrollView>
+            <StackLayout BackgroundColor="White" Margin="10,10,40,10">
+                <CollectionView x:Name="ListI" ItemsSource="{Binding PostFromFirebase}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid ColumnDefinitions="*,*,*">
+
+                            <Frame HeightRequest="50" Grid.Column="0" WidthRequest="50" CornerRadius="40">
+                                        <Image Source="{Binding image}" HeightRequest="70" WidthRequest="70"/>
+                                        
+                                    </Frame>
+                                    <Label Text="{Binding message}" Grid.Column="1"/>
+                            </Grid>
+
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+              
+            </StackLayout>
+        </ScrollView>
+        <Frame  Grid.Row="0"
+            BorderColor="Transparent"
+            BackgroundColor="SkyBlue"
+            HeightRequest="65"
+            WidthRequest="65"
+            CornerRadius="50"
+            Padding="0"
+            HorizontalOptions="End"
+            VerticalOptions="End"
+            Margin="20"
+            x:Name="BottomMenu"
+            >
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+            </Frame.GestureRecognizers>
+            <Grid Padding="0" ColumnDefinitions="*">
+                <Image Source="home.png" WidthRequest="30" HeightRequest="20" Grid.Column="0" />
+
+            </Grid>
+        </Frame>
+
+        <Frame HeightRequest="50" BorderColor="Transparent" Grid.Row="0" VerticalOptions="Start" Margin="0" Padding="0" >
+            <Grid  ColumnDefinitions="*,*,*">
+                <Frame HorizontalOptions="Start" Grid.Column="0" WidthRequest="45" HeightRequest="45">
+                    <Image Source="has.png" WidthRequest="90" HeightRequest="70"/>
+                </Frame>
+                <Label HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="1" Text="Full Name"/>
+                <Frame Margin="5" HorizontalOptions="End" Grid.Column="2" WidthRequest="45" HeightRequest="45">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Frame.GestureRecognizers>
+                    <Image Source="j.jpeg" x:Name="profilepx10" WidthRequest="70" HeightRequest="70"/>
+                </Frame>
+            </Grid>
+        </Frame>
+
+    </Grid>
+
+</ContentPage>

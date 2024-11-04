@@ -18,13 +18,13 @@
                             <Image Source="education.jpg" WidthRequest="110" HeightRequest="110"/>
                         </Frame>
                         <Grid RowDefinitions="*,*,*,*" Grid.Column="1">
-                            <Label HorizontalOptions="Start" Margin="69,0,0,0" Grid.Row="0" VerticalOptions="Center" Text="My learning"/>
+                            <Label HorizontalOptions="Start" Margin="69,0,0,0" Grid.Row="0" VerticalOptions="Center" Text="GIRLS REPRODUCTIVE SYSTEEM"/>
                             <Label HorizontalOptions="Start" Margin="69,0,0,0" Grid.Row="1" VerticalOptions="Center" Text="My learning"/>
                             <Label HorizontalOptions="Start" Margin="69,0,0,0" Grid.Row="2" VerticalOptions="Center" Text="My learning"/>
                             
                             <StackLayout Grid.Row="3" BackgroundColor="Transparent">
                                 <Grid ColumnDefinitions="5.7*,*"> 
-                                <ProgressBar WidthRequest="170" Grid.Column="0"  Progress="0.5" ProgressColor="Green"  HorizontalOptions="End"/>
+                                <ProgressBar WidthRequest="170" Grid.Column="0"  Progress="0.5" ProgressColor="BLUE"  HorizontalOptions="End"/>
                                     <Label Text="50%" HorizontalOptions="End" TextColor="Black" Grid.Column="1"/>
                                 </Grid>
                             </StackLayout>

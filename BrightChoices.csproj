@@ -61,10 +61,13 @@
 	  <None Remove="Resources\Fonts\JosefinSans-VariableFont_wght.ttf" />
 	  <None Remove="Resources\Fonts\shapes.ttf" />
 	  <None Remove="Resources\Images\add.png" />
+	  <None Remove="Resources\Images\biology.jpg" />
+	  <None Remove="Resources\Images\brightvi.mp4" />
 	  <None Remove="Resources\Images\Camera.png" />
 	  <None Remove="Resources\Images\comment.png" />
 	  <None Remove="Resources\Images\editicons.png" />
 	  <None Remove="Resources\Images\education.jpg" />
+	  <None Remove="Resources\Images\Femalerepro.png" />
 	  <None Remove="Resources\Images\friend.png" />
 	  <None Remove="Resources\Images\google.jpeg" />
 	  <None Remove="Resources\Images\has.png" />
@@ -77,6 +80,8 @@
 	  <None Remove="Resources\Images\login.png" />
 	  <None Remove="Resources\Images\magnifier.png" />
 	  <None Remove="Resources\Images\mate.png" />
+	  <None Remove="Resources\Images\menstrualcycle.png" />
+	  <None Remove="Resources\Images\messenger.png" />
 	  <None Remove="Resources\Images\notification.png" />
 	  <None Remove="Resources\Images\notifications.png" />
 	  <None Remove="Resources\Images\readingbook.png" />
@@ -85,6 +90,8 @@
 	  <None Remove="Resources\Images\settings.png" />
 	  <None Remove="Resources\Images\share.png" />
 	  <None Remove="Resources\Images\videoplayer.png" />
+	  <None Remove="Resources\Raw\data.mp3" />
+	  <None Remove="Resources\Videos\brightv.mp4" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -96,6 +103,7 @@
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
+		<PackageReference Include="Plugin.Maui.Audio" Version="3.0.1" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -117,7 +125,16 @@
 	  <MauiXaml Update="LossonsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="MessagersList.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MessangerPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Newacconte1.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="NotificationsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="ProfilePage.xaml">
@@ -132,9 +149,23 @@
 	  <MauiXaml Update="Registration.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="SearchPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="settingsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="videotest.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Include="Resources\Raw\brightv.mp4" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Resources\Videos\" />
 	</ItemGroup>
 
 </Project>

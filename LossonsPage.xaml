@@ -2,14 +2,262 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BrightChoices.LossonsPage"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              Shell.NavBarIsVisible="False"
              Title="LossonsPage">
     <Grid RowDefinitions="*, auto">
-        <ScrollView>
-            <StackLayout BackgroundColor="White">
+        <ScrollView x:Name="Scrow" Scrolled="Scrow_Scrolled">
+            <StackLayout Padding="10,50,10,10" BackgroundColor="White">
+                <Label Margin="5" Text="comprehensive course on the menstrual cycle." TextColor="SkyBlue" FontSize="25" FontAttributes="Bold"/>
+                <toolkit:MediaElement
+                 x:Name="video"                  
+                 Source="embed://brightv.mp4"
+                 ShouldAutoPlay="True"
+                 ShouldLoopPlayback="True"
+                 HeightRequest="200"
+                 />         
+                <Label  FontSize="18" FontAttributes="Bold" Text="1. Introduction"/>
+                <Label  FontSize="18" Margin="1" FontAttributes="Italic" Text="Definition: Menstrual cycle is the monthly series of physiological changes preparing the body for potential pregnancy. 
+                 Importance: Understanding the menstrual cycle is crucial for reproductive health, fertility, and overall well-being."/>
+                <Label FontAttributes="Bold" FontSize="18" Text="MENSTRUATION"/>
+                <Label  FontSize="18" Text="Menstruation is defined as the time from the first day of bleeding until the last day of bleeding. Day 1 is the first day of full bleeding, not spotting. This bleeding is the shedding of the lining of the uterus which consists of blood, cervical mucus and endometrial tissue. 
+"/>
 
+
+                <Label FontAttributes="Bold" FontSize="18" Text="THE FOLLICULAR PHASE"/>
+                <Label  FontSize="18" Text="The follicular phase is defined as your first day of bleeding up until ovulation and is the phase where oestrogen takes centre stage. 
+                        Follicle stimulating hormone (FSH) is produced from the pituitary gland which helps to prepare the ovaries to release an egg at ovulation. FSH encourages the growth of the ovarian follicles (which contain the eggs),which in turn produce oestrogen. 
+                        One follicle is eventually chosen as the dominant follicle and will release its egg at ovulation. As FSH is released and as the follicle grows, more oestrogen is produced. The follicular phase is considered to be slightly more flexible in length and can be easily influenced by your environment such as exercise, diet, lifestyle and stress. This means that from cycle to cycle your follicular phase can vary in length.
+
+ 2.Phases of the Menstrual Cycle*
+
+1. *Menstruation (Days 1-5)
+    - Shedding of uterine lining
+    - Bleeding (average 3-7 days)
+    - Hormone levels: Estrogen and progesterone drop
+2. *Follicular Phase (Days 6-14)*
+    - Follicle growth in ovaries
+    - Estrogen levels increase
+    - Cervical mucus production"/>
+                <Label FontAttributes="Bold" FontSize="18" Text="OVULATION"/>
+
+                <Label FontSize="18" Text="Ovulation (the real star of the menstrual cycle!) is the release of an egg from the dominant ovarian follicle into the fallopian tube. This release of the egg is stimulated by the rising oestrogen levels in the first half of the cycle. Once oestrogen has reached a certain level it inhibits FSH and instead causes a surge of luteinising hormone (LH) which triggers the release of the egg from the ovaries.Ovulation occurs in the middle of your cycle, although it can vary. "/>
+                <Label FontAttributes="Bold" FontSize="18" Text="THE LUTEAL PHASE"/>
+                <Label FontSize="18" Text="
+The luteal phase is from ovulation to the first day of bleeding again. This phase is when the body prepares for possible pregnancy and the hormone progesterone takes centre stage.During this time the follicle that released the egg during ovulation begins to turn into the corpus luteum. The corpus luteum produces progesterone (and a small bit of oestrogen too). If there is no fertilisation of the egg during this month, the corpus luteum begins to break down.This causes a drop in both progesterone and oestrogen and begins the signalling for menstruation to occur.The luteal phase is generally more fixed in length than the follicular phase and typically lasts 13-15 days for most people. Therefore, if you count back 13-15 days from the start of menstruation it can help to pinpoint when you may be ovulating. It is important to note that it can be normal for a person’s luteal phase to be between 10-16 days depending on the individual. This is why understanding your own cycle is important.
+3. *Ovulation (Day 14)*
+    - Release of mature egg from ovary
+    - Estrogen surge
+    - Fertile window (12-24 hours)
+4. *Luteal Phase (Days 15-28)*
+    - Corpus luteum forms in ovary
+    - Progesterone levels increase
+    - Uterine lining thickens"/>
+
+                <Label FontAttributes="Bold" HorizontalOptions="Center" Margin="10" FontSize="18" Text="Quiz 1: Menstrual Cycle Basics"/>
+                <Label FontSize="18" Text="1. What is the definition of the menstrual cycle?"/>
+                <RadioButton GroupName="test" FontAttributes="Bold" Content="A) series of physiological changes preparing the body for pregnancy"></RadioButton>
+                <RadioButton GroupName="test" FontAttributes="Bold" Content="b) A monthly period of bleeding"></RadioButton>
+                <RadioButton GroupName="test" FontAttributes="Bold" Content="c) A yearly event of ovulation"></RadioButton>
+                <RadioButton GroupName="test" FontAttributes="Bold" Content="d) A quarterly change in hormone levels "></RadioButton>
+                <Label FontAttributes="Bold" HorizontalOptions="Center" Margin="10" FontSize="18" Text="Quiz 1: Menstrual Cycle Basics"/>
+                <Label FontSize="18" Text="2. What is the average length of a menstrual cycle?"/>
+                <RadioButton GroupName="tests" FontAttributes="Bold" Content="a) 21-35 days"></RadioButton>
+                <RadioButton GroupName="tests" FontAttributes="Bold" Content="b) 28 days"></RadioButton>
+                <RadioButton GroupName="tests" FontAttributes="Bold" Content="c) 40 days"></RadioButton>
+                <RadioButton GroupName="tests" FontAttributes="Bold" Content="d) 60 days"></RadioButton>
+                <Button Text="Submit" TextColor="#fff" Margin="5" BackgroundColor="SkyBlue" FontAttributes="Bold" FontSize="15"/>
+
+                <Label FontSize="18" Text="PART ONE:CYCLE LENGTH And REGULARITY" FontAttributes="Bold"/>
+                <Label FontSize="18"  Text="
+Paying attention to cycle length is important because it allows us to determine whether or not our cycles are regular or irregular. Irregular cycles are a common symptom of polycystic ovarian syndrome (PCOS), hypothalamic amenorrhea, stress and perimenopause.
+
+How to track the length of your cycle
+Day 1 of the menstrual cycle is defined by your first day of a full bleed. You may experience some spotting before your period starts (typically a light or dark brown colour) but only start counting when you experience the first day of full flow.
+
+What’s a normal cycle length? A normal cycle length is anywhere between 21 and 35 days. Interestingly only around 10-15% of women actually have a 28 day cycle!
+
+What’s a normal amount of variation? A regular cycle is considered to be consistently the same length, give or take a couple of days. Natural fluctuations in a cycle are normal, so if your cycle is 31 days one month, and 35 days the next month, that’s still considered a regular cycle.The general rule is that the length of your menstrual cycle can vary up to 8 days in a year. For example, one cycle may be 30 days, another 28 and another 35. This would mean there was a variation of 7 days (between the shortest 28 and longest 35). 
+Variation in cycle length Is normal in adolescence 
+When you first start your menstrual cycle the first few years are likely to be irregular and this is normal. Your periods may also be heavier during this time as well. Troubleshooting
+If your cycle is more than 35 days, or you consistently experience more than 8 days of variation each cycle then you are considered to have an irregular cycle.If you’ve recently started to experience shorter cycles and you’re in your late 30s or 40s, then this could be a sign of perimenopause.Does having a regular cycle always mean ovulation has occurred?Not necessarily. In a recent series of studies, lack of ovulation or anovulation was found to occur about 10-18% of the time in women. Ovulation is the real star of the menstrual cycle! So the next step in our tracking guide is all about ovulation. 
+ 3.Hormones and Regulation*
+
+1. *Estrogen*
+    - Stimulates follicle growth
+    - Regulates cervical mucus
+    - Maintains uterine lining
+2. *Progesterone*
+    - Prepares uterine lining for implantation
+    - Maintains pregnancy
+3. *Gonadotropin-Releasing Hormone (GnRH)*
+    - Regulates estrogen and progesterone
+4. *Hypothalamic-Pituitary-Ovarian Axis*
+    - Complex interplay between hormones and organs
+4.Menstrual Cycle Length and Variations
+1. *Average Cycle Length*: 28 days
+2. *Variations*: 21-35 days
+3. *Factors Influencing Cycle Length*: age, weight, stress, exercise
+
+ 5.Menstrual Cycle and Fertility*
+
+1. *Fertile Window*: 12-24 hours after ovulation
+2. *Conception*: sperm meets egg during fertile window
+3. *Implantation*: fertilized egg attaches to uterine lining
+
+6.Menstrual Cycle Disorders*
+
+1. *Amenorrhea*: absent or irregular periods
+2. *Dysmenorrhea*: painful periods
+3. *Polycystic Ovary Syndrome (PCOS)*: hormonal imbalance
+4. *Endometriosis*: uterine lining growth outside uterus
+
+7. Menstrual Cycle Management*
+
+1. *Tracking Methods*: calendar, basal body temperature, ovulation predictor kits
+2. *Birth Control*: hormonal and non-hormonal options
+3. *Menstrual Products*: pads, tampons, menstrual cups
+"/>
+                <Label FontAttributes="Bold" HorizontalOptions="Center" Margin="10" FontSize="18" Text="Quiz 2: Phases of the Menstrual Cycle"/>
+                <Label FontSize="18" Text="1. What is the first phase of the menstrual cycle?"/>
+                <RadioButton GroupName="test" FontAttributes="Bold" Content="a) Menstruation"></RadioButton>
+                <RadioButton GroupName="test" FontAttributes="Bold" Content="b) Follicular Phase"></RadioButton>
+                <RadioButton GroupName="test" FontAttributes="Bold" Content="c) Ovulation"></RadioButton>
+                <RadioButton GroupName="test" FontAttributes="Bold" Content="d) Luteal Phase"></RadioButton>
+                <Label FontSize="18" Text="2. During which phase does the body prepare for possible pregnancy?"/>
+                <RadioButton GroupName="tests" FontAttributes="Bold" Content="a) Follicular Phase"></RadioButton>
+                <RadioButton GroupName="tests" FontAttributes="Bold" Content="b) Ovulation"></RadioButton>
+                <RadioButton GroupName="tests" FontAttributes="Bold" Content="c) Luteal Phase"></RadioButton>
+                <RadioButton GroupName="tests" FontAttributes="Bold" Content="d) Menstruation"></RadioButton>
+                <Button Text="Submit" TextColor="#fff" Margin="5" BackgroundColor="SkyBlue" FontAttributes="Bold" FontSize="15"/>
+
+                <Label FontSize="18" Margin="5" FontAttributes="Bold" Text="PART TWO: TRACKING OVULATION"/>
+                <Label FontSize="18" Text="Even if you’re not trying to get pregnant, it’s still a good idea to track your ovulation. Healthy ovulation is a sign of overall good health!
+How to track ovulation We recommend tracking ovulation through a combination of i) observing your cervical mucus and ii) observing changes in your basal body temperature (or BBT).
+Cervical Mucus
+Cervical mucus is a component of vagnial discharge. It can be seen in your underwear or on toilet paper in different stages across the month.Our cervical mucus can change throughout the month in different textures and consistencies such as creamy, thick, stretchy, white, raw-egg-like and clear. These different colours and textures are a great indication as to what is happening with your hormones and can also help us track ovulation.Just before ovulation, higher oestrogen levels cause the glands in the cervix to make plenty of clear, stretchy cervical mucus - we call this fertile mucus. This helps the sperm to travel through the cervix when you are at your most fertile.During the luteal phase you will likely notice less cervical mucus because progesterone dries up your fertile mucus.As we age the amount of mucus decreases - you may not have as many fertile mucus days in your cycle. It is common in your 20’s and early 30’s to have around 5 days of fertile mucus and only 1-2 days in your late 30’s and 40’s.
+
+How to Track Your Cervical Mucus 
+It is important to check your cervical mucus before you use the bathroom. 
+There are different ways of noting your cervical mucus, here are some terms that may help you to observe yours. 
+Colour - White, clear, yellow, cloudy 
+Feeling - Dry, wet, slippery, sticky, tacky
+Texture - Thick, like raw egg white, thin, stretchy, tacky
+
+Step 1: Before checking your cervical mucus, observe whether you can feel anything in your underwear - can you notice a wet sensation or does it feel dry?
+Step 2: Insert a clean finger inside the vagina (ideally your middle or ring finger).
+Step 3: You can also check your cervical mucus by wiping toilet paper at the opening of your vagina.
+Step 4: When you pull your finger out or observe the toilet paper, roll the substance between your thumb and finger to check the colour and consistency. If the mucus stretches (ideally to about 3-5 cm long) as you pull your thumb and finger apart, and it’s clear-coloured, you are likely about to ovulate.
+Step 5: Keep a note of changes in colour and consistency in our chart at the back of this guide. 
+It is important to note that only checking your cervical mucus in your underwear throughout the day is not as reliable an indicator.
+
+Cervical Mucus Across Your Cycle
+Here is a basic breakdown of what each stage may look like: Follicular Phase - white, dry and tacky (it might feel a little sticky) or creamy, wet and cloudy.
+Ovulation - clear-coloured, more watery and stretchy (like raw egg white).Luteal Phase - white, dry and sticky again, but for some people can be thicker and cloudier at this time too. 
+Troubleshooting 
+I’m seeing fertile mucus in my luteal phase This can indicate a possible hormone imbalance in progesterone and oestrogen – either your oestrogen is too high in relation to progesterone or you may be deficient in progesterone. 
+I’m on the OCP, can I track my cervical mucus? If you are on the birth control pill it can thicken the cervical mucus so it will be a different consistency and texture. You also do not ovulate on the birth control pill and therefore will not see the above changes occur. 
+What influences cervical mucus?
+Cervical mucus quality can be influenced by your diet, hydration, stress levels and lifestyle. Alcohol, caffeine, medication use and stress can all reduce cervical mucus quality.
+
+You may get a rise in oestrogen (and therefore changes in cervical mucus) that is not followed by ovulation, which is why it’s also important to track your temperature in conjunction with your cervical mucus in order to confirm.
+Basal Body Temperature (BBT)
+
+Your basal body temperature (BBT) is your body's lowest resting temperature. Your BBT is lowest during the first half of your cycle and rises by about 0.3 - 0.5 degrees centigrade after ovulation in response to progesterone being released from the corpus luteum (progesterone increases our metabolism slightly which causes the increase in temperature). 
+How to Track Your BBT 
+Step 1: Get a digital thermometer with readings accurate to at least 1 decimal place (for example, it can read 35.1, not just 35 degrees). 
+Step 2: Every morning, first thing, before getting out of bed, take your temperature and record it in our printable temperature chart at the back of this guide. Make sure you take your temperature at the same time everyday, before you eat, drink or brush your teeth! 
+Step 3: Observe the rise and fall in your temperature. If you see a consistent rise in temperature of at least 0.3 degrees across three days consistently, then ovulation has likely occurred. 
+How long should the temperature rise last for? 
+Professor Jerilynn Prior suggests that sustained higher temperature readings of at least 10 days are necessary for fertility. Any less than this you may not have enough days of high progesterone to allow the uterine lining (endometrium) to mature. 
+What else can impact your BBT? 
+Some days your readings may not be reliable. These include days when you’re unwell, have slept around 2 hours less than normal or drank alcohol the previous evening. Travel can also affect temperature. Simply make a note of this in the comments section of this tracker and continue the next day. Other Methods to Track Ovulation 
+Ovulation Strips: Ovulation test strips can be bought at your local pharmacy. They track the surge in Luteinising Hormone (LH) which typically occurs 24-48 hours before you ovulate. However, even though you detect a surge in LH it doesn’t necessarily mean that you are going to ovulate. If you have PCOS, your reading may not be accurate as LH levels can be consistently elevated throughout the cycle. 
+Cycle Apps: Cycle apps cannot accurately predict ovulation through an algorithm alone, unless you are using them to consistently track your BBT and cervical mucus. 
+Troubleshooting 
+I started tracking and I don't think I'm ovulating First of all, don’t panic! It’s normal to have the occasional anovulatory cycle. Stress, illness, travel, increased exercise and low-carb diets can all impact ovulation. If you track your cycle over a number of months and you don’t appear to be ovulating, then it’s a good idea to speak to your GP or seek out further testing at Future Woman to get to the root cause. 
+My temperature rise lasts less than 10 days 
+This could be a sign of a shorter luteal phase, which is common in perimenopause . This may also be a sign of an imbalance in oestrogen and progesterone. We offer different tests at Future Woman that can help you understand why this might be the case. 
+When is the best time to get pregnant? 
+Conception can occur up to 5 days before ovulation and 12–24 hours afterwards. According to Professor Prior, the days of stretchy cervical mucus before you’ve ovulated are the best days to conceive. That’s because the sperm needs to be ready and waiting as the egg makes its way down the fallopian tube towards the uterus.
+"/>
+
+                <Label FontAttributes="Bold" HorizontalOptions="Center" Margin="10" FontSize="18" Text="Quiz 2: Phases of the Menstrual Cycle"/>
+                <Label FontSize="18" Text="1. What is the first phase of the menstrual cycle?"/>
+                <RadioButton GroupName="test" FontAttributes="Bold" Content="a) Menstruation"></RadioButton>
+                <RadioButton GroupName="test" FontAttributes="Bold" Content="b) Follicular Phase"></RadioButton>
+                <RadioButton GroupName="test" FontAttributes="Bold" Content="c) Ovulation"></RadioButton>
+                <RadioButton GroupName="test" FontAttributes="Bold" Content="d) Luteal Phase"></RadioButton>
+                <Label FontSize="18" Text="2. During which phase does the body prepare for possible pregnancy?"/>
+                <RadioButton GroupName="tests" FontAttributes="Bold" Content="a) Follicular Phase"></RadioButton>
+                <RadioButton GroupName="tests" FontAttributes="Bold" Content="b) Ovulation"></RadioButton>
+                <RadioButton GroupName="tests" FontAttributes="Bold" Content="c) Luteal Phase"></RadioButton>
+                <RadioButton GroupName="tests" FontAttributes="Bold" Content="d) Menstruation"></RadioButton>
+                <Button Text="Submit" TextColor="#fff" Margin="5" BackgroundColor="SkyBlue" FontAttributes="Bold" FontSize="15"/>
+
+
+                <Label FontSize="18" Margin="5" FontAttributes="Bold" Text="PART THREE: OTHER SIGNS And SYMPTOMS"/>
+                <Label FontSize="18" Margin="5" Text="
+Other signs and symptoms during your menstrual cycle can provide valuable insights into your hormonal health. For example, a heavy and painful flow could indicate that your oestrogen is higher relative to your progesterone in the second half of your cycle. 
+                  "/>
+                <Label FontSize="18" Margin="5" FontAttributes="Bold" Text="  LENGTH OF MENSTRUATION 📆 "/>
+                <Label FontSize="18" Margin="5" Text="The length of your menstruation is the time between Day 1 of full flow and your last day of bleeding or spotting.
+There is quite a bit of variation from woman to woman, but a period should last from 3–7 days, with 4–5 days being average. Having a longer bleeding time than 7 days is called menorrhagia. This can be an indication of potential unopposed oestrogen levels, meaning that there are high oestrogen levels and lower progesterone levels (potentially caused by anovulation). Menorrhagia can also be a sign of something else like thyroid imbalance or perimenopause. 
+                    "/>
+                <Label FontSize="18" Margin="5"  FontAttributes="Bold"  Text=  " AMOUNT OF FLOW 🩸🩸 "/>
+                <Label FontSize="18" Margin="5" Text=" You can track your flow easily using a menstrual cup, but it’s also possible to get an idea of how heavy your flow is from how many tampons or pads you use in a month."/>
+
+                <Label FontSize="18" Margin="5"  FontAttributes="Bold"  Text=   "AMOUNT OF FLOW (CONT'D) 🩸🩸 "/>
+                <Label FontSize="18" Margin="5"  Text="It’s considered normal to use 6–10 tampons or pads each period. If you’re soaking more than 16 regular tampons or pads, or if you bleed for more than 8 days, you likely have an excessively heavy flow. A heavy flow can be due to unopposed oestrogen, perimenopause, thyroid imbalance, high histamine and more. 
+On the other hand, if you’re only bleeding for 1 or 2 days and you only use around 5 tampons or pads per period, you likely have an especially light flow. This also can be an indication of an hormonal imbalance such as low oestrogen, lack of ovulation or perimenopause. 
+               "/>
+                <Label FontSize="18" Margin="5"  FontAttributes="Bold"  Text=   "PERIOD COLOUR 🟠  🔴 ⚫ 🟤 🧼 "/>
+                <Label FontSize="18" Margin="5"  Text=   "  Tracking the colour of your bleeding can be another useful indicator of menstrual health. It’s important to note whether it’s black, brown, red or pink. 
+Ideally your period should start with a vibrant red colour – whether scarlet, cherry, crimson or rose. Blood should also flow easily and shouldn’t be clotted or clumpy (this can indicate unopposed oestrogen or oestrogen that is predominantly being directed down the 16-OH pathway which can be explored in our tests at Future Woman). 
+It is normal to see black, brown and dark red blood as this is the colour it can turn when it interacts with oxygen, which is especially common if the blood is on a pad. If you are seeing dark brown blood before your period this may be due to the fact that it’s blood that took longer to leave the uterus so can be common at the beginning and end of your period. 
+Please note that if your period blood is light pink or grey it is important to visit your GP to rule out possible infection. 
+                       "/>
+                <Label FontSize="18" Margin="5"  FontAttributes="Bold"  Text=   "SPOTTING 🟤 "/>
+                <Label FontSize="18" Margin="5"  Text=   "  It is normal to have some light spotting as your period starts and finishes but if it is longer than one day it may be a sign of a potential hormonal imbalance. 
+Excessive brown spotting before your period can indicate that there may be a progesterone deficiency. Brown discharge can also be a sign of PCOS and perimenopause but can also be a natural part of your period.This is why it is important to record your spotting and talk it through with your practitioner. 
+                "/>
+                <Label FontSize="18" Margin="5"  FontAttributes="Bold"  Text=   "  PAIN DURING YOUR PERIOD 🛑  "/>
+                <Label FontSize="18" Margin="5"  Text=   "   While it’s common for women to experience pain with their period, it’s not normal and it’s important to keep track of it. Pain can be an indication that there may be an underlying imbalance or condition such as unopposed oestrogen, endometriosis, high inflammation, high histamine and more. 
+
+                           "/>
+                <Label FontSize="18" Margin="5"  FontAttributes="Bold"  Text=   "  BOWEL MOVEMENTS "/>
+                <Label FontSize="18"  Text=   " Many women experience constipation around ovulation and can get diarrhea on the first day or so when their period starts. Loose bowel motions during your period can be exacerbated by high or low oestrogen and progesterone levels. Pay attention to any changes and record them to discuss with one of the FUTURE WOMAN practitioners.
+
+"/>
+                <Label FontSize="18" Margin="5"  FontAttributes="Bold"  Text=   "   BREAST TENDERNESS  "/>
+                <Label FontSize="18"  Text=   "Breast tenderness can be a sign of high oestrogen - you may experience this around ovulation or during your luteal phase when oestrogen has its 
+second peak. 
+Pay attention also to the area of the breast that is tender - is it at the front of the breast (place a flat hand on your breast and push towards your back) or to the side near the armpit? Note if the pain is sharp, tender, generalised, localised, constant or throbbing? Breast pain has been linked to low progesterone levels and imbalanced prolactin. 
+"/>
+                <Label FontSize="18" Margin="5"  FontAttributes="Bold"  Text=   "  ENERGY LEVELS ⚡ "/>
+                <Label FontSize="18"  Text=   "Notice how your energy fluctuates throughout your cycle. For example, do you feel more lethargic in the week leading up to your period? Do you feel more energised around ovulation? Record these changes as they may provide insight into your hormone levels. 
+"/>
+                <Label FontSize="18" Margin="5"  FontAttributes="Bold"  Text=   " SLEEP 🌜 "/>
+                <Label FontSize="18"  Text=   " The quality of your sleep changes across your cycle. Paying attention to sleeping patterns throughout your cycle can provide an indication of your hormone balance too. 
+For example, you are more likely to have poor-quality sleep during the days leading up to and during menstruation, due to the drop in both oestrogen and progesterone. Specifically, the drop in progesterone causes the body to drop in temperature which can impact sleep quality.Your sex hormones also have a close link to melatonin which can impact your quality of sleep.
+ "/>
+                <Label FontSize="18" Margin="5"  FontAttributes="Bold"  Text=   " FLUID RETENTION 🩸 "/>
+                <Label FontSize="18"  Text=   "Any bloating or puffiness should be recorded in this section. Getting up to pee at night can also be a sign of fluid retention. Commonly, fluid retention has been linked to high oestrogen and low progesterone levels. This is because estradiol encourages aldosterone activity in the kidney which results in more fluid retention, while progesterone helps to block the effect of aldosterone which leads to less fluid retention. 
+"/>
+                <Label FontSize="18" Margin="5"  FontAttributes="Bold"  Text=   "  MOOD  "/>
+<Label FontSize="18"  Text=   "HEADACHES And MIGRAINES 
+Do you get headaches or migraines at different points in your cycle? A migraine is a severe type of headache that is often accompanied by nausea. 
+If you experience cyclical migraines (i.e. they happen at the same point in your cycle every month), then this can be a sign of hormone imbalance.There are three common times in a cycle when you may experience hormonal migraines - ovulation (a combination of high histamine and oestrogen), just before or during your period (an imbalance in dropping oestrogen levels) and post-period (due to a drop in iron levels after bleeding). 
+Here are some quizzes based on the comprehensive course on the menstrual cycle:
+
+
+"/>
+
+                <Label FontAttributes="Bold" HorizontalOptions="Center" Margin="10" FontSize="18" Text="Unlock Your Exam with MWK 20,000, and get a certificate."/>
+                <Button Margin="5" Text="Unlock" TextColor="#fff" BackgroundColor="SkyBlue" FontAttributes="Bold" FontSize="15"/>
 
             </StackLayout>
+
         </ScrollView>
         <Frame  Grid.Row="0"
                 
@@ -17,12 +265,16 @@
                 BackgroundColor="SkyBlue"
                 HeightRequest="65"
                 WidthRequest="65"
+                HasShadow="True"
                 CornerRadius="50"
                 HorizontalOptions="End"
                 VerticalOptions="End"
-                Margin="20"
-               
->
+                Margin="20">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+            </Frame.GestureRecognizers>
+
+            
             <Grid Padding="0" ColumnDefinitions="*">
                 <Image Source="home.png" WidthRequest="20" HeightRequest="20" Grid.Column="0"/>
              
@@ -34,9 +286,9 @@
                 <Frame BorderColor="Transparent" HorizontalOptions="Start" Grid.Column="0" WidthRequest="45" HeightRequest="45">
                     <Image Source="has.png" WidthRequest="70" HeightRequest="70"/>
                 </Frame>
-                <Label HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="1" Text="Full Name"/>
+                <Label HorizontalOptions="Center" x:Name="profilename" VerticalOptions="Center" Grid.Column="1" Text="Full Name"/>
                 <Frame Margin="5" HorizontalOptions="End" Grid.Column="2" WidthRequest="45" HeightRequest="45">
-                    <Image Source="j.jpeg" WidthRequest="70" HeightRequest="70"/>
+                    <Image Source="j.jpeg" x:Name="profilepx1" WidthRequest="70" HeightRequest="70"/>
                 </Frame>
             </Grid>
         </Frame>

@@ -1,6 +1,7 @@
 ﻿using Firebase.Database;
 using BrightChoices;
 using BrightChoices.Models;
+using Plugin.Maui.Audio;
 namespace BrightChoices
 {
 
@@ -14,7 +15,6 @@ namespace BrightChoices
         {
             
             InitializeComponent();
-            Navigation.PushAsync(new learning());
             registrations.Clear();
             firebase = fibaseobj;
             Data_Reader();
@@ -26,17 +26,25 @@ namespace BrightChoices
           
                         
         }
+        private readonly IAudioManager audio;
 
         private void logInBtn_Clicked(object sender, EventArgs e)
         {
             
             if (login(EmailTx.Text, PasswordTx.Text))
             {
-                Navigation.PushAsync(new Forum(firebase));
+                Navigation.PushAsync(new Forum(firebase, audio));
             }
             else
             {
-                DisplayAlert("Alert", "Account Not Found", "Cancel");
+                if (datacheck == 1)
+                {
+
+                }
+                else
+                {
+                    DisplayAlert("Alert", "Account Not Found", "Cancel");
+                }
             }
         
         }
@@ -61,7 +69,8 @@ namespace BrightChoices
         public static string bio;
         public static string fullname;
         public static string emails;
-        
+
+        int datacheck = 0;
 
         public bool login(string email, string passwords)
         {           
@@ -87,6 +96,7 @@ namespace BrightChoices
             else
             {
                 DisplayAlert("Alert", "Low internet connection try again letter", "Cancel");
+                datacheck = 1;
             }
             return false;
         }

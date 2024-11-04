@@ -15,7 +15,7 @@
             <Grid  ColumnDefinitions="*,*">
                 <Frame HorizontalOptions="Start" Grid.Column="0" WidthRequest="45" HeightRequest="45">
                     
-                    <Image Source="j.jpeg" WidthRequest="70" HeightRequest="70"/>
+                    <Image Source="j.jpeg" x:Name="prifilepxz" WidthRequest="70" HeightRequest="70"/>
                 </Frame>
                 <Grid Grid.Column="1">
                 <Label HorizontalOptions="Center" VerticalOptions="Center" Text="My learning"/>
@@ -31,7 +31,7 @@
 
                         <Grid Padding="2"  RowDefinitions="1.5*,*">
                             <Frame Grid.Row="0">
-                                <Image Source="j.jpeg" WidthRequest="440" HeightRequest="440"/>
+                                <Image Source="biology.jpg" WidthRequest="440" HeightRequest="440"/>
 
                                 <!--<tools:MediaElement
                                 x:Name="toolvideo"
@@ -42,10 +42,10 @@
 
                             </Frame>
                             <Grid Padding="7" RowDefinitions="*,*,*,*,*" Grid.Row="1">
-                                <Label Grid.Row="0"  FontAttributes="Bold" HorizontalOptions="Center" TextColor="Green" VerticalOptions="Start" Text="Learn C#"/>
-                                <Label Grid.Row="1"  HorizontalOptions="Start" VerticalOptions="Start" Text="Create mobile Application with C#"/>
-                                <Label Grid.Row="2"  HorizontalOptions="Start" VerticalOptions="Start" Text="Create DeskTop Application with C#"/>
-                                <Label Grid.Row="3"  HorizontalOptions="Start" VerticalOptions="Start" Text="Create Web Application with C#"/>
+                                <Label Grid.Row="0"  FontAttributes="Bold" HorizontalOptions="Center" TextColor="Green" VerticalOptions="Start" Text="Learn Biology"/>
+                                <Label Grid.Row="1"  HorizontalOptions="Start" VerticalOptions="Start" Text="understand biollogy"/>
+                                <Label Grid.Row="2"  HorizontalOptions="Start" VerticalOptions="Start" Text="understand its part"/>
+                                <Label Grid.Row="3"  HorizontalOptions="Start" VerticalOptions="Start" Text="understand how its works"/>
                                 <Button Grid.Row="4" x:Name="CardBtn1" Clicked="CardBtn1_Clicked" HorizontalOptions="Center" HeightRequest="40" Margin="10,10,10,20" WidthRequest="100" Text="Inroll" TextColor="#fff" BackgroundColor="SkyBlue" />
                             </Grid>
                         </Grid>
@@ -57,7 +57,7 @@
 
                         <Grid Padding="2"  RowDefinitions="1.5*,*">
                             <Frame Grid.Row="0">
-                                <Image Source="j.jpeg" WidthRequest="440" HeightRequest="440"/>
+                                <Image Source="femalerepro.png" WidthRequest="440" HeightRequest="440"/>
 
                                 <!--<tools:MediaElement
                                 x:Name="toolvideo"
@@ -69,21 +69,18 @@
                             </Frame>
                             <Grid Padding="7" RowDefinitions="*,*,*,*,*" Grid.Row="1">
                                 <Label Grid.Row="0"  FontAttributes="Bold" HorizontalOptions="Center" TextColor="Green" VerticalOptions="Start" Text="Learn C#"/>
-                                <Label Grid.Row="1"  HorizontalOptions="Start" VerticalOptions="Start" Text="Create mobile Application with C#"/>
-                                <Label Grid.Row="2"  HorizontalOptions="Start" VerticalOptions="Start" Text="Create DeskTop Application with C#"/>
-                                <Label Grid.Row="3"  HorizontalOptions="Start" VerticalOptions="Start" Text="Create Web Application with C#"/>
+                                <Label Grid.Row="1"  HorizontalOptions="Start" VerticalOptions="Start" Text="understand your body"/>
+                                <Label Grid.Row="2"  HorizontalOptions="Start" VerticalOptions="Start" Text="understand its part"/>
+                                <Label Grid.Row="3"  HorizontalOptions="Start" VerticalOptions="Start" Text="understand how its works"/>
                                 <Button Grid.Row="4" x:Name="CardBtn2" HorizontalOptions="Center" HeightRequest="40" Margin="10,10,10,20" WidthRequest="100" Text="Inroll" TextColor="#fff" BackgroundColor="SkyBlue" />
                             </Grid>
                         </Grid>
-
-
-
                     </Frame>
                     <Frame Margin="20,20,20,100" Padding="-5" HasShadow="True" HeightRequest="460" WidthRequest="300" HorizontalOptions="Center" VerticalOptions="Start">
 
                         <Grid Padding="2"  RowDefinitions="1.5*,*">
                             <Frame Grid.Row="0">
-                                <Image Source="j.jpeg" WidthRequest="440" HeightRequest="440"/>
+                                <Image Source="menstrualcycle.png" WidthRequest="440" HeightRequest="440"/>
 
                                 <!--<tools:MediaElement
                                 x:Name="toolvideo"
@@ -101,9 +98,6 @@
                                 <Button Grid.Row="4" x:Name="CardBtn3" HorizontalOptions="Center" HeightRequest="40" Margin="10,10,10,20" WidthRequest="100" Text="Inroll" TextColor="#fff" BackgroundColor="SkyBlue" />
                             </Grid>
                         </Grid>
-
-
-
                     </Frame>
                     <Frame Margin="20,20,20,100" Padding="-5" HasShadow="True" HeightRequest="460" WidthRequest="300" HorizontalOptions="Center" VerticalOptions="Start">
 
@@ -150,9 +144,6 @@
                                 <Button Grid.Row="4" x:Name="CardBtn5" HorizontalOptions="Center" HeightRequest="40" Margin="10,10,10,20" WidthRequest="100" Text="Inroll" TextColor="#fff" BackgroundColor="SkyBlue" />
                             </Grid>
                         </Grid>
-
-
-
                     </Frame>
                 </StackLayout>
         
@@ -162,30 +153,20 @@
                 BorderColor="Transparent"
                 BackgroundColor="SkyBlue"
                 HeightRequest="65"
-                WidthRequest="280"
-                CornerRadius="20"
+                WidthRequest="65"
+                CornerRadius="50"
                 Padding="0"
-                HorizontalOptions="Center"
+                HorizontalOptions="End"
                 VerticalOptions="End"
                 Margin="20"
-                x:Name="BottomMenu" 
->
-            <Grid Padding="0" ColumnDefinitions="*,*,*,*,*">
+                x:Name="BottomMenu"
+                >
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+            </Frame.GestureRecognizers>
+            <Grid Padding="0" ColumnDefinitions="*">
                 <Image Source="home.png" WidthRequest="30" HeightRequest="20" Grid.Column="0" />
-
-                <Image Source="settings.png" WidthRequest="20" HeightRequest="20" Grid.Column="1">
-                  
-                </Image>
-
-                <Image Source="add.png" WidthRequest="50"  HeightRequest="40" Grid.Column="2" />
-
-                <Image Source="readingbook.png" WidthRequest="20" HeightRequest="20" Grid.Column="3">
-                   
-                </Image>
-
-                <Image Source="magnifier.png" WidthRequest="20" HeightRequest="20" Grid.Column="4">
-                   
-                </Image>
+             
             </Grid>
         </Frame>
 
@@ -196,7 +177,10 @@
                 </Frame>
                 <Label HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="1" Text="Full Name"/>
                 <Frame Margin="5" HorizontalOptions="End" Grid.Column="2" WidthRequest="45" HeightRequest="45">
-                    <Image Source="j.jpeg" WidthRequest="70" HeightRequest="70"/>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Frame.GestureRecognizers>
+                    <Image Source="j.jpeg" x:Name="profilepx10" WidthRequest="70" HeightRequest="70"/>
                 </Frame>
             </Grid>
         </Frame>

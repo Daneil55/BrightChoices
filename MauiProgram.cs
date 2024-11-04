@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Logging;
 using CommunityToolkit.Maui;
 using CommunityToolkit.Maui.Maps;
+using Plugin.Maui.Audio;
 
 namespace BrightChoices
 {
@@ -26,6 +27,11 @@ namespace BrightChoices
 
 #if DEBUG
             builder.Services.AddSingleton(new FirebaseClient("https://brightgs-a18bb-default-rtdb.asia-southeast1.firebasedatabase.app/"));
+            builder.Services.AddSingleton(AudioManager.Current);
+            builder.Services.AddTransient<Forum>();
+
+            builder.Services.AddSingleton<MessangerPage> ();
+            builder.Services.AddSingleton<MessagersList> ();
             builder.Services.AddSingleton<Regis>();
             builder.Services.AddSingleton<MainPage>();
             builder.Services.AddSingleton<Publisherxaml>();
