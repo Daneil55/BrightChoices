@@ -1,53 +1,65 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ColorConverter ="clr-namespace:ColorConveterNameSpace"
+             xmlns:ColorConverterTwo ="clr-namespace:ColorTwoConveterNameSpace"
              x:Class="BrightChoices.MessangerPage"
+             Shell.NavBarIsVisible="False"
              Title="MessangerPage">
-   
 
-
-    <Grid RowDefinitions="*, auto">
-        <ScrollView>
-                <StackLayout Padding="10" HeightRequest="800">
-
-                    <Label Text="Messages" 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ColorConverter:ColorConveter  x:Key="UsernameToName"/>
+            <ColorConverterTwo:ColorConveterTwo  x:Key="ColorToName"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout Orientation="Vertical" BackgroundColor="Transparent" Spacing="10">
+    <Label Text="Messages" 
             x:Name="MSname"
             FontSize="24" 
+            Margin="5"
             HorizontalOptions="Center" 
-            Margin="0,20" />
+            />
 
+    <StackLayout Orientation="Vertical" Spacing="0" >
+            
+                <Frame Padding="10,10,10,10" Margin="0,0,0,-10" BackgroundColor="Transparent" HeightRequest="650" BorderColor="Transparent" VerticalOptions="Start">
+                    <ScrollView>
                     <CollectionView x:Name="ListI"
                
                ItemsSource="{Binding PostFromFirebase}">
                         <CollectionView.ItemTemplate >
                             <DataTemplate>
 
-                                <StackLayout Padding="10">
-                                    <Label Text="{Binding Messanger}" 
-                                FontAttributes="Bold" />
-                                    <Label Text="{Binding Messages}" 
-                                BackgroundColor="Transparent" />
-                                    <Label Text="{Binding date, StringFormat='{}{0:hh:mm tt}'}" 
-                                FontSize="12" 
-                                TextColor="Gray" 
-                                HorizontalOptions="End" />
+                            <Frame Padding="10" Margin="10" BackgroundColor="{Binding Messanger, Converter={StaticResource ColorToName}}" HasShadow="True">
+                                <StackLayout>
+                                <Label Text="{Binding Messanger, Converter={StaticResource UsernameToName}}" 
+                                FontAttributes="Bold"
+                                       FontSize="18"/>
+                                    <Label Text="{Binding Messages}"
+                                     BackgroundColor="{Binding Messanger, Converter={StaticResource ColorToName}}" />
+                                    <Label Text="{Binding date, StringFormat='{}{FFF}'}" 
+                                FontSize="15"                                  
+                                HorizontalOptions="End"
+                                TextColor="{Binding MessageOwner, Converter={StaticResource ColorToName}}"/>
                                 </StackLayout>
+                                </Frame>
 
                             </DataTemplate>
                         </CollectionView.ItemTemplate>
                     </CollectionView>
-                 
-            </StackLayout>
-        </ScrollView>
-        <Frame  Grid.Row="0"
+                    </ScrollView>
+                </Frame>
+            <HorizontalStackLayout Spacing="0" Padding="10">
+            <Frame  Grid.Row="0"
             BorderColor="Transparent"
-            BackgroundColor="SkyBlue"
-            HeightRequest="80"
-            CornerRadius="50"
+            BackgroundColor="DeepSkyBlue"
+            CornerRadius="10"
+                WidthRequest="245"
             Padding="0"
-            HorizontalOptions="End"
+            HorizontalOptions="Start"
             VerticalOptions="End"
-            Margin="20"
+            Margin="7"
             x:Name="BottomMenu"
             >
             
@@ -55,19 +67,44 @@
   VerticalOptions="End" 
   Margin="0,10">
 
-                <Entry x:Name="MessageEntry" 
+                <Editor x:Name="MessageEntry" 
 Placeholder="Type your message here" 
 HorizontalOptions="FillAndExpand" />
 
-                <Button Text="Send" 
- Clicked="Button_Clicked"
- Command="{Binding SendMessageCommand}" 
- Margin="5,0,0,0" />
+
 
             </StackLayout>
         </Frame>
 
-        
-    </Grid>
 
+        <Frame  Grid.Row="0"
+            BorderColor="Transparent"
+            BackgroundColor="DeepSkyBlue"
+            CornerRadius="50"
+            Padding="10"
+                HeightRequest="67"
+                WidthRequest="67"
+            HorizontalOptions="End"
+            VerticalOptions="End"
+            Margin="7"
+            x:Name="BottomMenuq"
+            >
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+            </Frame.GestureRecognizers>
+
+            <StackLayout Orientation="Horizontal" 
+  VerticalOptions="End" 
+  Margin="0,10">
+                <Image Source="send.png" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+
+            </StackLayout>
+        </Frame>
+
+
+            </HorizontalStackLayout>
+
+        </StackLayout>
+    </StackLayout>
 </ContentPage>

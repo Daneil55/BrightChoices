@@ -32,6 +32,7 @@ namespace BrightChoices
 
             builder.Services.AddSingleton<MessangerPage> ();
             builder.Services.AddSingleton<MessagersList> ();
+            builder.Services.AddSingleton<LearningProgress>();
             builder.Services.AddSingleton<Regis>();
             builder.Services.AddSingleton<MainPage>();
             builder.Services.AddSingleton<Publisherxaml>();

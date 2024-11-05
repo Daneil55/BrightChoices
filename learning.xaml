@@ -31,55 +31,6 @@
 
                         <Grid Padding="2"  RowDefinitions="1.5*,*">
                             <Frame Grid.Row="0">
-                                <Image Source="biology.jpg" WidthRequest="440" HeightRequest="440"/>
-
-                                <!--<tools:MediaElement
-                                x:Name="toolvideo"
-                                Source="https://www.youtube.com/watch?v=Hh279ES_FNQ&list=PLdo4fOcmZ0oUBAdL2NwBpDs32zwGqb9DY"
-                                WidthRequest="360" 
-                                HeightRequest="360"
-                            />-->
-
-                            </Frame>
-                            <Grid Padding="7" RowDefinitions="*,*,*,*,*" Grid.Row="1">
-                                <Label Grid.Row="0"  FontAttributes="Bold" HorizontalOptions="Center" TextColor="Green" VerticalOptions="Start" Text="Learn Biology"/>
-                                <Label Grid.Row="1"  HorizontalOptions="Start" VerticalOptions="Start" Text="understand biollogy"/>
-                                <Label Grid.Row="2"  HorizontalOptions="Start" VerticalOptions="Start" Text="understand its part"/>
-                                <Label Grid.Row="3"  HorizontalOptions="Start" VerticalOptions="Start" Text="understand how its works"/>
-                                <Button Grid.Row="4" x:Name="CardBtn1" Clicked="CardBtn1_Clicked" HorizontalOptions="Center" HeightRequest="40" Margin="10,10,10,20" WidthRequest="100" Text="Inroll" TextColor="#fff" BackgroundColor="SkyBlue" />
-                            </Grid>
-                        </Grid>
-
-
-
-                    </Frame>
-                    <Frame Margin="20,20,20,100" Padding="-5" HasShadow="True" HeightRequest="460" WidthRequest="300" HorizontalOptions="Center" VerticalOptions="Start">
-
-                        <Grid Padding="2"  RowDefinitions="1.5*,*">
-                            <Frame Grid.Row="0">
-                                <Image Source="femalerepro.png" WidthRequest="440" HeightRequest="440"/>
-
-                                <!--<tools:MediaElement
-                                x:Name="toolvideo"
-                                Source="https://www.youtube.com/watch?v=Hh279ES_FNQ&list=PLdo4fOcmZ0oUBAdL2NwBpDs32zwGqb9DY"
-                                WidthRequest="360" 
-                                HeightRequest="360"
-                            />-->
-
-                            </Frame>
-                            <Grid Padding="7" RowDefinitions="*,*,*,*,*" Grid.Row="1">
-                                <Label Grid.Row="0"  FontAttributes="Bold" HorizontalOptions="Center" TextColor="Green" VerticalOptions="Start" Text="Learn C#"/>
-                                <Label Grid.Row="1"  HorizontalOptions="Start" VerticalOptions="Start" Text="understand your body"/>
-                                <Label Grid.Row="2"  HorizontalOptions="Start" VerticalOptions="Start" Text="understand its part"/>
-                                <Label Grid.Row="3"  HorizontalOptions="Start" VerticalOptions="Start" Text="understand how its works"/>
-                                <Button Grid.Row="4" x:Name="CardBtn2" HorizontalOptions="Center" HeightRequest="40" Margin="10,10,10,20" WidthRequest="100" Text="Inroll" TextColor="#fff" BackgroundColor="SkyBlue" />
-                            </Grid>
-                        </Grid>
-                    </Frame>
-                    <Frame Margin="20,20,20,100" Padding="-5" HasShadow="True" HeightRequest="460" WidthRequest="300" HorizontalOptions="Center" VerticalOptions="Start">
-
-                        <Grid Padding="2"  RowDefinitions="1.5*,*">
-                            <Frame Grid.Row="0">
                                 <Image Source="menstrualcycle.png" WidthRequest="440" HeightRequest="440"/>
 
                                 <!--<tools:MediaElement
@@ -91,19 +42,22 @@
 
                             </Frame>
                             <Grid Padding="7" RowDefinitions="*,*,*,*,*" Grid.Row="1">
-                                <Label Grid.Row="0"  FontAttributes="Bold" HorizontalOptions="Center" TextColor="Green" VerticalOptions="Start" Text="Learn C#"/>
-                                <Label Grid.Row="1"  HorizontalOptions="Start" VerticalOptions="Start" Text="Create mobile Application with C#"/>
-                                <Label Grid.Row="2"  HorizontalOptions="Start" VerticalOptions="Start" Text="Create DeskTop Application with C#"/>
-                                <Label Grid.Row="3"  HorizontalOptions="Start" VerticalOptions="Start" Text="Create Web Application with C#"/>
-                                <Button Grid.Row="4" x:Name="CardBtn3" HorizontalOptions="Center" HeightRequest="40" Margin="10,10,10,20" WidthRequest="100" Text="Inroll" TextColor="#fff" BackgroundColor="SkyBlue" />
+                                <Label Grid.Row="0"  FontAttributes="Bold" HorizontalOptions="Center" TextColor="Goldenrod" VerticalOptions="Start" Text="Learn Menstrual cycle"/>
+                                <Label Grid.Row="1"  HorizontalOptions="Start" VerticalOptions="Start" Text="Menstruation"/>
+                                <Label Grid.Row="2"  HorizontalOptions="Start" VerticalOptions="Start" Text="follicular phase"/>
+                                <Label Grid.Row="3"  HorizontalOptions="Start" VerticalOptions="Start" Text="luteal phase"/>
+                                <Button Grid.Row="4" x:Name="CardBtn1" Clicked="CardBtn1_Clicked" HorizontalOptions="Center" HeightRequest="40" Margin="10,10,10,20" WidthRequest="100" Text="Inroll" TextColor="#fff" BackgroundColor="SkyBlue" />
                             </Grid>
                         </Grid>
+
+
+
                     </Frame>
                     <Frame Margin="20,20,20,100" Padding="-5" HasShadow="True" HeightRequest="460" WidthRequest="300" HorizontalOptions="Center" VerticalOptions="Start">
 
                         <Grid Padding="2"  RowDefinitions="1.5*,*">
                             <Frame Grid.Row="0">
-                                <Image Source="j.jpeg" WidthRequest="440" HeightRequest="440"/>
+                                <Image Source="biology.jpg" WidthRequest="440" HeightRequest="440"/>
 
                                 <!--<tools:MediaElement
                                 x:Name="toolvideo"
@@ -114,11 +68,11 @@
 
                             </Frame>
                             <Grid Padding="7" RowDefinitions="*,*,*,*,*" Grid.Row="1">
-                                <Label Grid.Row="0"  FontAttributes="Bold" HorizontalOptions="Center" TextColor="Green" VerticalOptions="Start" Text="Learn C#"/>
-                                <Label Grid.Row="1"  HorizontalOptions="Start" VerticalOptions="Start" Text="Create mobile Application with C#"/>
-                                <Label Grid.Row="2"  HorizontalOptions="Start" VerticalOptions="Start" Text="Create DeskTop Application with C#"/>
-                                <Label Grid.Row="3"  HorizontalOptions="Start" VerticalOptions="Start" Text="Create Web Application with C#"/>
-                                <Button Grid.Row="4" x:Name="CardBtn4" HorizontalOptions="Center" HeightRequest="40" Margin="10,10,10,20" WidthRequest="100" Text="Inroll" TextColor="#fff" BackgroundColor="SkyBlue" />
+                                <Label Grid.Row="0"  FontAttributes="Bold" HorizontalOptions="Center" TextColor="Green" VerticalOptions="Start" Text="Learn biology"/>
+                                <Label Grid.Row="1"  HorizontalOptions="Start" VerticalOptions="Start" Text="cell biology"/>
+                                <Label Grid.Row="2"  HorizontalOptions="Start" VerticalOptions="Start" Text="genetics and molecular biology"/>
+                                <Label Grid.Row="3"  HorizontalOptions="Start" VerticalOptions="Start" Text="evolution and ecology"/>
+                                <Button Grid.Row="4" x:Name="CardBtn2" HorizontalOptions="Center" HeightRequest="40" Margin="10,10,10,20" WidthRequest="100" Text="In Progress" TextColor="#fff" BackgroundColor="SkyBlue" />
                             </Grid>
                         </Grid>
                     </Frame>
@@ -126,7 +80,7 @@
 
                         <Grid Padding="2"  RowDefinitions="1.5*,*">
                             <Frame Grid.Row="0">
-                                <Image Source="j.jpeg" WidthRequest="440" HeightRequest="440"/>
+                                <Image Source="environment.jpg" WidthRequest="440" HeightRequest="440"/>
 
                                 <!--<tools:MediaElement
                                 x:Name="toolvideo"
@@ -137,14 +91,15 @@
 
                             </Frame>
                             <Grid Padding="7" RowDefinitions="*,*,*,*,*" Grid.Row="1">
-                                <Label Grid.Row="0"  FontAttributes="Bold" HorizontalOptions="Center" TextColor="Green" VerticalOptions="Start" Text="Learn C#"/>
-                                <Label Grid.Row="1"  HorizontalOptions="Start" VerticalOptions="Start" Text="Create mobile Application with C#"/>
-                                <Label Grid.Row="2"  HorizontalOptions="Start" VerticalOptions="Start" Text="Create DeskTop Application with C#"/>
-                                <Label Grid.Row="3"  HorizontalOptions="Start" VerticalOptions="Start" Text="Create Web Application with C#"/>
-                                <Button Grid.Row="4" x:Name="CardBtn5" HorizontalOptions="Center" HeightRequest="40" Margin="10,10,10,20" WidthRequest="100" Text="Inroll" TextColor="#fff" BackgroundColor="SkyBlue" />
+                                <Label Grid.Row="0"  FontAttributes="Bold" HorizontalOptions="Center" TextColor="Green" VerticalOptions="Start" Text="Learn environment"/>
+                                <Label Grid.Row="1"  HorizontalOptions="Start" VerticalOptions="Start" Text="ecological components(biotic and abbiotic factors)"/>
+                                <Label Grid.Row="2"  HorizontalOptions="Start" VerticalOptions="Start" Text="ecosystem dynamics(interactions and cycles)"/>
+                                <Label Grid.Row="3"  HorizontalOptions="Start" VerticalOptions="Start" Text="environment systems(atmosphere,hydrosphere)"/>
+                                <Button Grid.Row="4" x:Name="CardBtn3" HorizontalOptions="Center" HeightRequest="40" Margin="10,10,10,20" WidthRequest="100" Text="In Progress" TextColor="#fff" BackgroundColor="SkyBlue" />
                             </Grid>
                         </Grid>
                     </Frame>
+
                 </StackLayout>
         
     </StackLayout>

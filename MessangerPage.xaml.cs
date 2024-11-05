@@ -25,7 +25,8 @@ public partial class MessangerPage : ContentPage
         firebase = firebase_;
         Post_Reader();
         
-        MSname.Text = Forum.usernames;
+
+        MSname.Text ="Leave A Message To: "+ Forum.fullname;
         ListI.ItemsSource = PostFromFirebase;
     }
     ObservableCollection<MessageModel> lists { get; set; } = new ObservableCollection<MessageModel>();
@@ -48,6 +49,7 @@ public partial class MessangerPage : ContentPage
                         if (lists[i].MessageOwner == Forum.usernames || lists[i].Messanger == Forum.usernames)
                         {
                             PostFromFirebase.Add(lists[i]);
+                            lists.Clear();
                         }
                     }
                 }
@@ -57,21 +59,29 @@ public partial class MessangerPage : ContentPage
     }
 
 
-    public async Task server(string message, string username, string messagesender)
+    public void server(string message, string username, string messagesender)
     {
 
-       await firebase.Child("MessageModel").PostAsync(new MessageModel
+       firebase.Child("MessageModel").PostAsync(new MessageModel
         {
             MessageOwner = username,
             Messages = message,
             Messanger = messagesender
         });
-        await DisplayAlert("Message", "Accout Registerd", "ok");
     }
     private async void Button_Clicked(object sender, EventArgs e)
     {
-        await server(MessageEntry.Text, MainPage.usernames, Forum.usernames);
-        
-        MessageEntry.Text = string.Empty;
+
+    }
+
+    private void TapGestureRecognizer_Tapped(object sender, TappedEventArgs e)
+    {
+        if (MessageEntry.Text.Trim() != null)
+        {
+            server(MessageEntry.Text, MainPage.usernames, Forum.usernames);
+            MessageEntry.Text = string.Empty;
+        }
+          
+            
     }
 }

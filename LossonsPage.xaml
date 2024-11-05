@@ -17,8 +17,9 @@
                  HeightRequest="200"
                  />         
                 <Label  FontSize="18" FontAttributes="Bold" Text="1. Introduction"/>
-                <Label  FontSize="18" Margin="1" FontAttributes="Italic" Text="Definition: Menstrual cycle is the monthly series of physiological changes preparing the body for potential pregnancy. 
-                 Importance: Understanding the menstrual cycle is crucial for reproductive health, fertility, and overall well-being."/>
+                <Label  FontSize="18" Margin="1" FontAttributes="Italic" Text="Definition: Menstrual cycle is the monthly series of physiological changes preparing the body for potential pregnancy.
+                        
+                        Importance: Understanding the menstrual cycle is crucial for reproductive health, fertility, and overall well-being."/>
                 <Label FontAttributes="Bold" FontSize="18" Text="MENSTRUATION"/>
                 <Label  FontSize="18" Text="Menstruation is defined as the time from the first day of bleeding until the last day of bleeding. Day 1 is the first day of full bleeding, not spotting. This bleeding is the shedding of the lining of the uterus which consists of blood, cervical mucus and endometrial tissue. 
 "/>
@@ -26,12 +27,17 @@
 
                 <Label FontAttributes="Bold" FontSize="18" Text="THE FOLLICULAR PHASE"/>
                 <Label  FontSize="18" Text="The follicular phase is defined as your first day of bleeding up until ovulation and is the phase where oestrogen takes centre stage. 
+                       
+                        
                         Follicle stimulating hormone (FSH) is produced from the pituitary gland which helps to prepare the ovaries to release an egg at ovulation. FSH encourages the growth of the ovarian follicles (which contain the eggs),which in turn produce oestrogen. 
+                       z
+                        
                         One follicle is eventually chosen as the dominant follicle and will release its egg at ovulation. As FSH is released and as the follicle grows, more oestrogen is produced. The follicular phase is considered to be slightly more flexible in length and can be easily influenced by your environment such as exercise, diet, lifestyle and stress. This means that from cycle to cycle your follicular phase can vary in length.
+"/>
 
- 2.Phases of the Menstrual Cycle*
-
-1. *Menstruation (Days 1-5)
+                <Label FontAttributes="Bold" FontSize="18" Text=" 2.Phases of the Menstrual Cycle"/>
+                    
+                    <Label FontSize="18" Text=" Menstruation (Days 1-5)
     - Shedding of uterine lining
     - Bleeding (average 3-7 days)
     - Hormone levels: Estrogen and progesterone drop
@@ -56,17 +62,17 @@ The luteal phase is from ovulation to the first day of bleeding again. This phas
 
                 <Label FontAttributes="Bold" HorizontalOptions="Center" Margin="10" FontSize="18" Text="Quiz 1: Menstrual Cycle Basics"/>
                 <Label FontSize="18" Text="1. What is the definition of the menstrual cycle?"/>
-                <RadioButton GroupName="test" FontAttributes="Bold" Content="A) series of physiological changes preparing the body for pregnancy"></RadioButton>
+                <RadioButton GroupName="test" x:Name="QuestionOne" FontAttributes="Bold" Content="A) series of physiological changes preparing the body for pregnancy"></RadioButton>
                 <RadioButton GroupName="test" FontAttributes="Bold" Content="b) A monthly period of bleeding"></RadioButton>
                 <RadioButton GroupName="test" FontAttributes="Bold" Content="c) A yearly event of ovulation"></RadioButton>
                 <RadioButton GroupName="test" FontAttributes="Bold" Content="d) A quarterly change in hormone levels "></RadioButton>
                 <Label FontAttributes="Bold" HorizontalOptions="Center" Margin="10" FontSize="18" Text="Quiz 1: Menstrual Cycle Basics"/>
                 <Label FontSize="18" Text="2. What is the average length of a menstrual cycle?"/>
-                <RadioButton GroupName="tests" FontAttributes="Bold" Content="a) 21-35 days"></RadioButton>
+                <RadioButton GroupName="tests" x:Name="QuestionTwo" FontAttributes="Bold" Content="a) 21-35 days"></RadioButton>
                 <RadioButton GroupName="tests" FontAttributes="Bold" Content="b) 28 days"></RadioButton>
                 <RadioButton GroupName="tests" FontAttributes="Bold" Content="c) 40 days"></RadioButton>
                 <RadioButton GroupName="tests" FontAttributes="Bold" Content="d) 60 days"></RadioButton>
-                <Button Text="Submit" TextColor="#fff" Margin="5" BackgroundColor="SkyBlue" FontAttributes="Bold" FontSize="15"/>
+                <Button Text="Submit" TextColor="#fff" x:Name="ButOne" Margin="5" BackgroundColor="SkyBlue" Clicked="Button_Clicked" FontAttributes="Bold" FontSize="15"/>
 
                 <Label FontSize="18" Text="PART ONE:CYCLE LENGTH And REGULARITY" FontAttributes="Bold"/>
                 <Label FontSize="18"  Text="
@@ -120,19 +126,19 @@ If your cycle is more than 35 days, or you consistently experience more than 8 d
 "/>
                 <Label FontAttributes="Bold" HorizontalOptions="Center" Margin="10" FontSize="18" Text="Quiz 2: Phases of the Menstrual Cycle"/>
                 <Label FontSize="18" Text="1. What is the first phase of the menstrual cycle?"/>
-                <RadioButton GroupName="test" FontAttributes="Bold" Content="a) Menstruation"></RadioButton>
+                <RadioButton GroupName="test" x:Name="QuastionThree" FontAttributes="Bold" Content="a) Menstruation"></RadioButton>
                 <RadioButton GroupName="test" FontAttributes="Bold" Content="b) Follicular Phase"></RadioButton>
                 <RadioButton GroupName="test" FontAttributes="Bold" Content="c) Ovulation"></RadioButton>
                 <RadioButton GroupName="test" FontAttributes="Bold" Content="d) Luteal Phase"></RadioButton>
                 <Label FontSize="18" Text="2. During which phase does the body prepare for possible pregnancy?"/>
                 <RadioButton GroupName="tests" FontAttributes="Bold" Content="a) Follicular Phase"></RadioButton>
                 <RadioButton GroupName="tests" FontAttributes="Bold" Content="b) Ovulation"></RadioButton>
-                <RadioButton GroupName="tests" FontAttributes="Bold" Content="c) Luteal Phase"></RadioButton>
+                <RadioButton GroupName="tests" x:Name="QuastionFour" FontAttributes="Bold" Content="c) Luteal Phase"></RadioButton>
                 <RadioButton GroupName="tests" FontAttributes="Bold" Content="d) Menstruation"></RadioButton>
-                <Button Text="Submit" TextColor="#fff" Margin="5" BackgroundColor="SkyBlue" FontAttributes="Bold" FontSize="15"/>
+                <Button Text="Submit" Clicked="Button_Clicked_1" TextColor="#fff" Margin="5" BackgroundColor="SkyBlue" FontAttributes="Bold" FontSize="15"/>
 
                 <Label FontSize="18" Margin="5" FontAttributes="Bold" Text="PART TWO: TRACKING OVULATION"/>
-                <Label FontSize="18" Text="Even if you’re not trying to get pregnant, it’s still a good idea to track your ovulation. Healthy ovulation is a sign of overall good health!
+                <Label FontSize="18" x:Name="ButTwo" Text="Even if you’re not trying to get pregnant, it’s still a good idea to track your ovulation. Healthy ovulation is a sign of overall good health!
 How to track ovulation We recommend tracking ovulation through a combination of i) observing your cervical mucus and ii) observing changes in your basal body temperature (or BBT).
 Cervical Mucus
 Cervical mucus is a component of vagnial discharge. It can be seen in your underwear or on toilet paper in different stages across the month.Our cervical mucus can change throughout the month in different textures and consistencies such as creamy, thick, stretchy, white, raw-egg-like and clear. These different colours and textures are a great indication as to what is happening with your hormones and can also help us track ovulation.Just before ovulation, higher oestrogen levels cause the glands in the cervix to make plenty of clear, stretchy cervical mucus - we call this fertile mucus. This helps the sperm to travel through the cervix when you are at your most fertile.During the luteal phase you will likely notice less cervical mucus because progesterone dries up your fertile mucus.As we age the amount of mucus decreases - you may not have as many fertile mucus days in your cycle. It is common in your 20’s and early 30’s to have around 5 days of fertile mucus and only 1-2 days in your late 30’s and 40’s.
@@ -182,18 +188,18 @@ When is the best time to get pregnant?
 Conception can occur up to 5 days before ovulation and 12–24 hours afterwards. According to Professor Prior, the days of stretchy cervical mucus before you’ve ovulated are the best days to conceive. That’s because the sperm needs to be ready and waiting as the egg makes its way down the fallopian tube towards the uterus.
 "/>
 
-                <Label FontAttributes="Bold" HorizontalOptions="Center" Margin="10" FontSize="18" Text="Quiz 2: Phases of the Menstrual Cycle"/>
-                <Label FontSize="18" Text="1. What is the first phase of the menstrual cycle?"/>
-                <RadioButton GroupName="test" FontAttributes="Bold" Content="a) Menstruation"></RadioButton>
-                <RadioButton GroupName="test" FontAttributes="Bold" Content="b) Follicular Phase"></RadioButton>
-                <RadioButton GroupName="test" FontAttributes="Bold" Content="c) Ovulation"></RadioButton>
-                <RadioButton GroupName="test" FontAttributes="Bold" Content="d) Luteal Phase"></RadioButton>
-                <Label FontSize="18" Text="2. During which phase does the body prepare for possible pregnancy?"/>
-                <RadioButton GroupName="tests" FontAttributes="Bold" Content="a) Follicular Phase"></RadioButton>
-                <RadioButton GroupName="tests" FontAttributes="Bold" Content="b) Ovulation"></RadioButton>
-                <RadioButton GroupName="tests" FontAttributes="Bold" Content="c) Luteal Phase"></RadioButton>
-                <RadioButton GroupName="tests" FontAttributes="Bold" Content="d) Menstruation"></RadioButton>
-                <Button Text="Submit" TextColor="#fff" Margin="5" BackgroundColor="SkyBlue" FontAttributes="Bold" FontSize="15"/>
+                <Label FontAttributes="Bold" HorizontalOptions="Center" Margin="10" FontSize="18" Text="Quiz 3: Hormones and Regulation"/>
+                <Label FontSize="18" Text="1. Which hormone stimulates follicle growth?"/>
+                <RadioButton GroupName="test"  FontAttributes="Bold" Content="a) Estrogen"></RadioButton>
+                <RadioButton GroupName="test" FontAttributes="Bold" Content="b) Progesterone"></RadioButton>
+                <RadioButton GroupName="test" FontAttributes="Bold" Content="c) Gonadotropin-Releasing Hormone (GnRH)"></RadioButton>
+                <RadioButton GroupName="test" x:Name="QuestionFive" FontAttributes="Bold" Content="d) Follicle-Stimulating Hormone (FSH)"></RadioButton>
+                <Label FontSize="18" Text="2. Which hormone maintains pregnancy?"/>
+                <RadioButton GroupName="tests" FontAttributes="Bold" Content="a) Estrogen"></RadioButton>
+                <RadioButton GroupName="tests" x:Name="QuestionSix" FontAttributes="Bold" Content="b) Progesterone"></RadioButton>
+                <RadioButton GroupName="tests" FontAttributes="Bold" Content="c) GnRH"></RadioButton>
+                <RadioButton GroupName="tests" FontAttributes="Bold" Content="d) FSH"></RadioButton>
+                <Button Text="Submit" x:Name="ButThree" TextColor="#fff" Clicked="Button_Clicked_2" Margin="5" BackgroundColor="SkyBlue" FontAttributes="Bold" FontSize="15"/>
 
 
                 <Label FontSize="18" Margin="5" FontAttributes="Bold" Text="PART THREE: OTHER SIGNS And SYMPTOMS"/>

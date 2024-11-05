@@ -18,13 +18,13 @@
                             <Image Source="education.jpg" WidthRequest="110" HeightRequest="110"/>
                         </Frame>
                         <Grid RowDefinitions="*,*,*,*" Grid.Column="1">
-                            <Label HorizontalOptions="Start" Margin="69,0,0,0" Grid.Row="0" VerticalOptions="Center" Text="GIRLS REPRODUCTIVE SYSTEEM"/>
+                            <Label HorizontalOptions="Start" Margin="69,0,0,0" Grid.Row="0" VerticalOptions="Center" FontAttributes="Bold" Text="GIRLS REPRODUCTIVE SYSTEEM"/>
                             <Label HorizontalOptions="Start" Margin="69,0,0,0" Grid.Row="1" VerticalOptions="Center" Text="My learning"/>
                             <Label HorizontalOptions="Start" Margin="69,0,0,0" Grid.Row="2" VerticalOptions="Center" Text="My learning"/>
                             
                             <StackLayout Grid.Row="3" BackgroundColor="Transparent">
                                 <Grid ColumnDefinitions="5.7*,*"> 
-                                <ProgressBar WidthRequest="170" Grid.Column="0"  Progress="0.5" ProgressColor="BLUE"  HorizontalOptions="End"/>
+                                <ProgressBar x:Name="CourseProgress" WidthRequest="170" Grid.Column="0"  Progress="0.5" ProgressColor="BLUE"  HorizontalOptions="End"/>
                                     <Label Text="50%" HorizontalOptions="End" TextColor="Black" Grid.Column="1"/>
                                 </Grid>
                             </StackLayout>
@@ -33,144 +33,7 @@
                         </Grid>
                     </Grid>
                 </Frame>
-                 <Frame Margin="20,70,20,20" HasShadow="True"  WidthRequest="350" HorizontalOptions="Center" VerticalOptions="Start">
-
-                    <Grid  ColumnDefinitions="*,10*">
-                        <Frame HorizontalOptions="Start" Grid.Column="0" WidthRequest="70" HeightRequest="70">
-
-                            <Image Source="education.jpg" WidthRequest="110" HeightRequest="110"/>
-                        </Frame>
-                        <Grid RowDefinitions="*,*,*,*" Grid.Column="1">
-                            <Label HorizontalOptions="Start" Margin="69,0,0,0" Grid.Row="0" VerticalOptions="Center" Text="My learning"/>
-                            <Label HorizontalOptions="Start" Margin="69,0,0,0" Grid.Row="1" VerticalOptions="Center" Text="My learning"/>
-                            <Label HorizontalOptions="Start" Margin="69,0,0,0" Grid.Row="2" VerticalOptions="Center" Text="My learning"/>
-                            
-                            <StackLayout Grid.Row="3" BackgroundColor="Transparent">
-                                <Grid ColumnDefinitions="5.7*,*"> 
-                                <ProgressBar WidthRequest="170" Grid.Column="0"  Progress="0.5" ProgressColor="Green"  HorizontalOptions="End"/>
-                                    <Label Text="50%" HorizontalOptions="End" TextColor="Black" Grid.Column="1"/>
-                                </Grid>
-                            </StackLayout>
-                           
-
-                        </Grid>
-                    </Grid>
-                </Frame>
-                 <Frame Margin="20,70,20,20" HasShadow="True"  WidthRequest="350" HorizontalOptions="Center" VerticalOptions="Start">
-
-                    <Grid  ColumnDefinitions="*,10*">
-                        <Frame HorizontalOptions="Start" Grid.Column="0" WidthRequest="70" HeightRequest="70">
-
-                            <Image Source="education.jpg" WidthRequest="110" HeightRequest="110"/>
-                        </Frame>
-                        <Grid RowDefinitions="*,*,*,*" Grid.Column="1">
-                            <Label HorizontalOptions="Start" Margin="69,0,0,0" Grid.Row="0" VerticalOptions="Center" Text="My learning"/>
-                            <Label HorizontalOptions="Start" Margin="69,0,0,0" Grid.Row="1" VerticalOptions="Center" Text="My learning"/>
-                            <Label HorizontalOptions="Start" Margin="69,0,0,0" Grid.Row="2" VerticalOptions="Center" Text="My learning"/>
-                            
-                            <StackLayout Grid.Row="3" BackgroundColor="Transparent">
-                                <Grid ColumnDefinitions="5.7*,*"> 
-                                <ProgressBar WidthRequest="170" Grid.Column="0"  Progress="0.5" ProgressColor="Green"  HorizontalOptions="End"/>
-                                    <Label Text="50%" HorizontalOptions="End" TextColor="Black" Grid.Column="1"/>
-                                </Grid>
-                            </StackLayout>
-                           
-
-                        </Grid>
-                    </Grid>
-                </Frame>
-                 <Frame Margin="20,70,20,20" HasShadow="True"  WidthRequest="350" HorizontalOptions="Center" VerticalOptions="Start">
-
-                    <Grid  ColumnDefinitions="*,10*">
-                        <Frame HorizontalOptions="Start" Grid.Column="0" WidthRequest="70" HeightRequest="70">
-
-                            <Image Source="education.jpg" WidthRequest="110" HeightRequest="110"/>
-                        </Frame>
-                        <Grid RowDefinitions="*,*,*,*" Grid.Column="1">
-                            <Label HorizontalOptions="Start" Margin="69,0,0,0" Grid.Row="0" VerticalOptions="Center" Text="My learning"/>
-                            <Label HorizontalOptions="Start" Margin="69,0,0,0" Grid.Row="1" VerticalOptions="Center" Text="My learning"/>
-                            <Label HorizontalOptions="Start" Margin="69,0,0,0" Grid.Row="2" VerticalOptions="Center" Text="My learning"/>
-                            
-                            <StackLayout Grid.Row="3" BackgroundColor="Transparent">
-                                <Grid ColumnDefinitions="5.7*,*"> 
-                                <ProgressBar WidthRequest="170" Grid.Column="0"  Progress="0.5" ProgressColor="Green"  HorizontalOptions="End"/>
-                                    <Label Text="50%" HorizontalOptions="End" TextColor="Black" Grid.Column="1"/>
-                                </Grid>
-                            </StackLayout>
-                           
-
-                        </Grid>
-                    </Grid>
-                </Frame>
-                 <Frame Margin="20,70,20,20" HasShadow="True"  WidthRequest="350" HorizontalOptions="Center" VerticalOptions="Start">
-
-                    <Grid  ColumnDefinitions="*,10*">
-                        <Frame HorizontalOptions="Start" Grid.Column="0" WidthRequest="70" HeightRequest="70">
-
-                            <Image Source="education.jpg" WidthRequest="110" HeightRequest="110"/>
-                        </Frame>
-                        <Grid RowDefinitions="*,*,*,*" Grid.Column="1">
-                            <Label HorizontalOptions="Start" Margin="69,0,0,0" Grid.Row="0" VerticalOptions="Center" Text="My learning"/>
-                            <Label HorizontalOptions="Start" Margin="69,0,0,0" Grid.Row="1" VerticalOptions="Center" Text="My learning"/>
-                            <Label HorizontalOptions="Start" Margin="69,0,0,0" Grid.Row="2" VerticalOptions="Center" Text="My learning"/>
-                            
-                            <StackLayout Grid.Row="3" BackgroundColor="Transparent">
-                                <Grid ColumnDefinitions="5.7*,*"> 
-                                <ProgressBar WidthRequest="170" Grid.Column="0"  Progress="0.5" ProgressColor="Green"  HorizontalOptions="End"/>
-                                    <Label Text="50%" HorizontalOptions="End" TextColor="Black" Grid.Column="1"/>
-                                </Grid>
-                            </StackLayout>
-                           
-
-                        </Grid>
-                    </Grid>
-                </Frame>
-                 <Frame Margin="20,70,20,20" HasShadow="True"  WidthRequest="350" HorizontalOptions="Center" VerticalOptions="Start">
-
-                    <Grid  ColumnDefinitions="*,10*">
-                        <Frame HorizontalOptions="Start" Grid.Column="0" WidthRequest="70" HeightRequest="70">
-
-                            <Image Source="education.jpg" WidthRequest="110" HeightRequest="110"/>
-                        </Frame>
-                        <Grid RowDefinitions="*,*,*,*" Grid.Column="1">
-                            <Label HorizontalOptions="Start" Margin="69,0,0,0" Grid.Row="0" VerticalOptions="Center" Text="My learning"/>
-                            <Label HorizontalOptions="Start" Margin="69,0,0,0" Grid.Row="1" VerticalOptions="Center" Text="My learning"/>
-                            <Label HorizontalOptions="Start" Margin="69,0,0,0" Grid.Row="2" VerticalOptions="Center" Text="My learning"/>
-                            
-                            <StackLayout Grid.Row="3" BackgroundColor="Transparent">
-                                <Grid ColumnDefinitions="5.7*,*"> 
-                                <ProgressBar WidthRequest="170" Grid.Column="0"  Progress="0.5" ProgressColor="Green"  HorizontalOptions="End"/>
-                                    <Label Text="50%" HorizontalOptions="End" TextColor="Black" Grid.Column="1"/>
-                                </Grid>
-                            </StackLayout>
-                           
-
-                        </Grid>
-                    </Grid>
-                </Frame>
-                 <Frame Margin="20,70,20,20" HasShadow="True"  WidthRequest="350" HorizontalOptions="Center" VerticalOptions="Start">
-
-                    <Grid  ColumnDefinitions="*,10*">
-                        <Frame HorizontalOptions="Start" Grid.Column="0" WidthRequest="70" HeightRequest="70">
-
-                            <Image Source="education.jpg" WidthRequest="110" HeightRequest="110"/>
-                        </Frame>
-                        <Grid RowDefinitions="*,*,*,*" Grid.Column="1">
-                            <Label HorizontalOptions="Start" Margin="69,0,0,0" Grid.Row="0" VerticalOptions="Center" Text="My learning"/>
-                            <Label HorizontalOptions="Start" Margin="69,0,0,0" Grid.Row="1" VerticalOptions="Center" Text="My learning"/>
-                            <Label HorizontalOptions="Start" Margin="69,0,0,0" Grid.Row="2" VerticalOptions="Center" Text="My learning"/>
-                            
-                            <StackLayout Grid.Row="3" BackgroundColor="Transparent">
-                                <Grid ColumnDefinitions="5.7*,*"> 
-                                <ProgressBar WidthRequest="170" Grid.Column="0"  Progress="0.5" ProgressColor="Green"  HorizontalOptions="End"/>
-                                    <Label Text="50%" HorizontalOptions="End" TextColor="Black" Grid.Column="1"/>
-                                </Grid>
-                            </StackLayout>
-                           
-
-                        </Grid>
-                    </Grid>
-                </Frame>
+                                  
                 
             </StackLayout>
         </ScrollView>
@@ -179,19 +42,16 @@
                 BorderColor="Transparent"
                 BackgroundColor="SkyBlue"
                 HeightRequest="65"
-                WidthRequest="280"
-                CornerRadius="20"
-                HorizontalOptions="Center"
+                WidthRequest="65"
+                CornerRadius="50"
+                HorizontalOptions="End"
                 VerticalOptions="End"
                 Margin="20"
                
 >
-            <Grid Padding="0" ColumnDefinitions="*,*,*,*">
+            <Grid Padding="0" ColumnDefinitions="*">
                 <Image Source="home.png" WidthRequest="20" HeightRequest="20" Grid.Column="0"/>
-                <Image Source="heart.png" WidthRequest="20" HeightRequest="20" Grid.Column="1"/>
-                <Image Source="send.png" WidthRequest="20" HeightRequest="20" Grid.Column="2"/>
-                <Image Source="share.png" WidthRequest="20" HeightRequest="20" Grid.Column="3"/>
-            </Grid>
+                </Grid>
         </Frame>
 
         <Frame HeightRequest="50" BorderColor="Transparent" Grid.Row="0" VerticalOptions="Start" Margin="0" Padding="0" >

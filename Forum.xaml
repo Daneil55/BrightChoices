@@ -17,51 +17,50 @@
         <Grid RowSpacing="5" Grid.Row="0" ColumnSpacing="5" RowDefinitions="100,120,auto" Padding="0">
 
         <Frame Grid.Row="0" BorderColor="White">
-            <Grid ColumnDefinitions="2*, auto,2*,2*,2*">
-        
-                    <Frame Grid.Column="0" BorderColor="White" WidthRequest="50" HeightRequest="50" HorizontalOptions="Start">
+            <StackLayout Orientation="Horizontal">
 
-                        <Image Source="has.png" Aspect="Fill" HeightRequest="80" WidthRequest="80" />
-
+                    <Frame CornerRadius="50" WidthRequest="50" HeightRequest="50" HorizontalOptions="End">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                        </Frame.GestureRecognizers>
+                        <Image Source="camera.png" x:Name="profileTx" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="205" HeightRequest="205" Aspect="Fill" />
                     </Frame>
-                    <Label Text="Bright Choices" Margin="10" TextColor ="#85C9Ef" WidthRequest="200"  x:Name="userTx" VerticalOptions="Center" HorizontalOptions="Center" FontSize="18" FontAttributes="Bold" Grid.Column="1"/>
-                    <Frame  Grid.Column="2" CornerRadius="50" Margin="15" BorderColor="Transparent" WidthRequest="50" HeightRequest="50" HorizontalOptions="End">
+
+                    <Label Text="Bright Choices" Margin="3" TextColor ="#85C9Ef" WidthRequest="111"  x:Name="userTx" VerticalOptions="Center" HorizontalOptions="Center" FontSize="18" FontAttributes="Bold" Grid.Column="1"/>
+                    <Frame  Grid.Column="2" CornerRadius="50" Margin="1" BorderColor="Transparent" WidthRequest="50" HeightRequest="50" HorizontalOptions="End">
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_6"/>
                         </Frame.GestureRecognizers>
 
-                        <Image Source="notifications.png" x:Name="noti" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="20" HeightRequest="20" Aspect="Fill" >
+                        <Image Source="notifications.png" x:Name="noti" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="30" HeightRequest="30" Aspect="Fill" >
 
                         </Image>
 
                     </Frame>
                 
-                    <Frame  Grid.Column="3" CornerRadius="50" BorderColor="Transparent" Margin="15" WidthRequest="50" HeightRequest="50" HorizontalOptions="End">
+                    <Frame  Grid.Column="3" CornerRadius="50" BorderColor="Transparent" Margin="1" WidthRequest="45" HeightRequest="45" HorizontalOptions="End">
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_7"/>
                         </Frame.GestureRecognizers>
 
-                        <Image Source="messenger.png" x:Name="frend" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="25" HeightRequest="25" Aspect="Fill" />
+                        <Image Source="messenger.png" x:Name="frend" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="28" HeightRequest="28" Aspect="Fill" />
 
                     </Frame>
                 
-                    <Frame  Grid.Column="4" CornerRadius="50" WidthRequest="50" HeightRequest="50" HorizontalOptions="End">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
-                        </Frame.GestureRecognizers>
-                        <Image Source="camera.png" x:Name="profileTx" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="205" HeightRequest="205" Aspect="Fill" />
 
-                    </Frame>
-                
-            </Grid>
+                </StackLayout>
         </Frame>
+            
         <Frame Grid.Row="1" BorderColor="White" Padding="0" >
-            <CollectionView x:Name="ListVs" ItemsLayout="HorizontalList" ItemsSource="{Binding DataFromFirebase}" Grid.Row="2">
+
+                <CollectionView x:Name="ListVs" ItemsLayout="HorizontalList" ItemsSource="{Binding DataFromFirebase}" Grid.Row="2">
 
                 <CollectionView.ItemTemplate >
                     <DataTemplate>
+                        
                         <Grid ColumnSpacing="20" RowDefinitions="2*,*">
                                 <Label x:Name="useraccount" IsVisible ="False"  Text="{Binding Username}"/>
+                                <Label IsVisible ="False"  Text="{Binding FullName}"/>
                                 <Frame Margin="5" CornerRadius="50" WidthRequest="80" HeightRequest="80" BorderColor="Black" Grid.Row="0" Padding="0">
                                     <Frame.GestureRecognizers>
                                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_12"/>
@@ -79,19 +78,19 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
         </Frame>
-
+       
 
             <Grid Grid.Row="3" HeightRequest="570" Padding="1">
-
+                <ActivityIndicator IsRunning="True" x:Name="ActivityACT" VerticalOptions="Start" Grid.Row="2"/>
                 <CollectionView x:Name="ListV" ItemsSource="{Binding PostFromFirebase}" >
 
             <CollectionView.ItemTemplate >
                 <DataTemplate >
-                <Grid>
-                        <Frame Margin="2" Padding="10" HasShadow="True" BorderColor="Transparent" CornerRadius="25">
-                    <Grid Grid.Row="2"  Margin="5">
+                <VerticalStackLayout Margin="10,10,10,10" BackgroundColor="#fff">
+                        <Frame Margin="2" Padding="-5" HasShadow="True" BorderColor="Transparent" CornerRadius="25">
+                    <Grid Grid.Row="2"  Margin="1">
                             
-            <Grid  Margin="-20" BackgroundColor="Transparent">
+            <Grid  Margin="-4" BackgroundColor="Transparent">
                    <Image Source="{Binding postimage, Converter={StaticResource ByteArrayToImage}}"  Aspect="AspectFill" />
 
 
@@ -110,65 +109,38 @@
                             </Frame>
                              <VerticalStackLayout Padding="-2" Spacing="2" WidthRequest="150" Grid.Column="1 " Margin="5" HorizontalOptions="Center">
                                     <Label Text="{Binding posterName}"  TextColor="White" FontSize="17" FontAttributes="Bold" VerticalOptions="Start" HorizontalOptions="Start"  />
-
-                                    <Label Text="{Binding date, Converter={StaticResource DateToTime}}" TextColor="White" FontSize="15"   VerticalOptions="Start" HorizontalOptions="Start" />
-
+                                    <Label Text="{Binding date, StringFormat='{dddd, dd MMMM yyyy}{0:hh:mm tt}'}" TextColor="White" FontSize="15"   VerticalOptions="Start" HorizontalOptions="Start" />
                             </VerticalStackLayout>   
                         </Grid>
                     </Frame>
-                    <Frame Grid.Row="2" VerticalOptions="End" Padding="0" HasShadow="True" BorderColor="Transparent" x:Name="CommentForm" Loaded="CommentForm_Loaded" BackgroundColor="Transparent" HeightRequest="140">
-                                                <Grid RowDefinitions="*,*">
-                                                    <Frame BorderColor="Transparent" BackgroundColor="Transparent" Grid.Row="0">
-                                                        
-                                                        <Grid ColumnSpacing="2" Padding="0" ColumnDefinitions="*,*,*,*,*,*">
-                                                                <Label IsVisible="False" x:Name="AccountLikeUName" Text="{Binding Username}"/>
-                                                                <Label IsVisible="False" x:Name="AccountLikeDateID" Text="{Binding Id}"/>
-                                                                <Image x:Name="Like" Grid.Column="0" HorizontalOptions="Start" WidthRequest="30" HeightRequest="30" Source="heart.png">
-                                                                    <Image.GestureRecognizers>
-                                                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_8"/>
-                                                                    </Image.GestureRecognizers>
-                                                                </Image>
-                                                                <Label Grid.Column="1" Text="{Binding like}" HorizontalOptions="Start" TextColor="White" FontSize="Body" WidthRequest="30" HeightRequest="20"/>
-
-                                                                <Image Grid.Column="2" HorizontalOptions="Start" WidthRequest="30" HeightRequest="70" Source="comment.png">
-                                                                    <Image.GestureRecognizers>
-                                                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_9"/>
-                                                                    </Image.GestureRecognizers>
-                                                                </Image>
-                                                                <Label Grid.Column="3" Text="{Binding comment}" HorizontalOptions="Start" TextColor="White" FontSize="Body" WidthRequest="30" HeightRequest="20"/>
-
-                                                                <Image Grid.Column="4" HorizontalOptions="Start" WidthRequest="30" HeightRequest="30" Source="send.png">
-                                                                    <Image.GestureRecognizers>
-                                                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_10"/>
-                                                                    </Image.GestureRecognizers> 
-                                                                </Image>
-                                                                <Label Grid.Column="5" Text="{Binding share}" HorizontalOptions="Start" TextColor="White" FontSize="Body" WidthRequest="30" HeightRequest="20"/>
-
-                                                        </Grid>
-                                                    </Frame>
-                                                    <Label Margin="5" FontAttributes="Bold" TextColor="White" FontSize="15" Grid.Row="1" Text="{Binding posttext}"/>
-
-                                                </Grid>
-
-                                            </Frame>
-
-
+                   
 
                 </Grid>
-
-
-
-            </Grid>
-        </Grid>
+                </Grid>
+                 </Grid>
                         </Frame>
-</Grid>
+
+                                <VerticalStackLayout Padding="0">
+                                    <Label IsVisible="False" x:Name="AccountLikeUName" Text="{Binding Username}"/>
+                                    <Label IsVisible="False" x:Name="AccountLikeDateID" Text="{Binding Id}"/>
+                                    <Label Text="{Binding posttext}"  FontAttributes="Bold"/>
+
+                                    <Frame Grid.Column="2" HorizontalOptions="Center" Padding="0" WidthRequest="100" HeightRequest="30" BackgroundColor="SkyBlue" BorderColor="Transparent">
+                                        <Frame.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_9"/>
+                                        </Frame.GestureRecognizers>
+                                        <Label Text="Comment" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White"/>
+                                    </Frame>
+
+                                </VerticalStackLayout>
+                            </VerticalStackLayout>
                     </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
             </Grid>
 
 
-            <ActivityIndicator IsRunning="True" VerticalOptions="End" Grid.Row="2"/>
+            
 
 
         </Grid>

@@ -27,6 +27,8 @@ public partial class Forum : ContentPage
         BindingContext = this;
         firebase = fibaseobj;
         audio = audioManager;
+        ActivityACT.IsRunning = true;
+        ActivityACT.IsVisible = true;
         DataFromFirebase.Clear();
         PostFromFirebase.Clear();
 
@@ -62,6 +64,7 @@ public partial class Forum : ContentPage
             if (DataFromFirebase != null)
             {
                 DataFromFirebase.Add(item.Object);
+                
             }
         });
     }
@@ -74,6 +77,8 @@ public partial class Forum : ContentPage
             if (PostFromFirebase != null)
             {
                 PostFromFirebase.Add(item.Object);
+                ActivityACT.IsRunning = true;
+                ActivityACT.IsVisible = true;
             }
         });
     }
@@ -142,7 +147,7 @@ public partial class Forum : ContentPage
 
     private void TapGestureRecognizer_Tapped_2(object sender, TappedEventArgs e)
     {
-        Navigation.PushAsync(new learning());
+        Navigation.PushAsync(new learning(firebase));
     }
 
     private void TapGestureRecognizer_Tapped_3(object sender, TappedEventArgs e)
@@ -189,8 +194,8 @@ public partial class Forum : ContentPage
         // DisplayAlert("Alert",lable.Text,"ok");
         
        
-        await UpdateUserId("Yes", Ids, most, Ids);
-        await better(lable.Text, likecount);
+        //await UpdateUserId("Yes", Ids, most, Ids);
+        //await better(lable.Text, likecount);
 
 
     }
@@ -220,13 +225,15 @@ public partial class Forum : ContentPage
         string useraccount = "useraccount";
     }
     public static string usernames;
+    public static string fullname;
     private void TapGestureRecognizer_Tapped_12(object sender, TappedEventArgs e)
     {
         Frame frame = (Frame)sender;
         Grid grid=(Grid)frame.Parent;
         Label label=(Label)grid.Children[0];
+        Label label1=(Label)grid.Children[1];
         usernames = label.Text;
-
+        fullname = label1.Text;
         Navigation.PushAsync(new MessangerPage(firebase));
     }
 

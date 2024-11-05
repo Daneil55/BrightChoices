@@ -38,6 +38,14 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
 	</PropertyGroup>
 
+	<PropertyGroup Condition="$(TargetFramework.Contains('-android')) and '$(Configuration)' == 'Release'">
+		<AndroidKeyStore>True</AndroidKeyStore>
+		<AndroidSigningKeyStore>BrightChoices.keystore</AndroidSigningKeyStore>
+		<AndroidSigningStorePass>SubscribNow</AndroidSigningStorePass>
+		<AndroidSigningKeyAlias>MauiAlias</AndroidSigningKeyAlias>
+		<AndroidSigningKeyPass>SubscribNow</AndroidSigningKeyPass>		
+	</PropertyGroup>
+	   
 	<ItemGroup>
 		<!-- App Icon -->
 		<MauiIcon Include="Resources\AppIcon\applogo.svg" ForegroundFile="Resources\AppIcon\applogo.svg" Color="#fff" />
@@ -67,6 +75,7 @@
 	  <None Remove="Resources\Images\comment.png" />
 	  <None Remove="Resources\Images\editicons.png" />
 	  <None Remove="Resources\Images\education.jpg" />
+	  <None Remove="Resources\Images\environment.jpg" />
 	  <None Remove="Resources\Images\Femalerepro.png" />
 	  <None Remove="Resources\Images\friend.png" />
 	  <None Remove="Resources\Images\google.jpeg" />

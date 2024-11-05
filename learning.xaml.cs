@@ -8,15 +8,16 @@ public partial class learning : ContentPage
 {
     private readonly FirebaseClient firebase;
     private readonly IAudioManager audio;
-    public learning()
+    public learning(FirebaseClient firebase)
 	{
 		InitializeComponent();
+        this.firebase = firebase;
         Profile_Ready();
     }
 
     private void CardBtn1_Clicked(object sender, EventArgs e)
     {
-		Navigation.PushAsync(new LearningProgress());
+		Navigation.PushAsync(new LearningProgress(firebase));
     }
     public void Profile_Ready()
     {

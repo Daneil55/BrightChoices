@@ -4,24 +4,29 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BrightChoices;
 
-namespace DateTimeConveterNameSpace
+namespace ColorTwoConveterNameSpace
 {
-    internal class DateTimeConveter : IValueConverter
+    internal class ColorConveterTwo : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            DateTime date;
-            string time = null;
-           
+            string username;
+            string fullname = null;
+
 
             if (value != null)
             {
-                date = (DateTime)value;
-                time = date.ToString("dd "+""+"HH:mm");
-              
+                username = (string)value;
+                if (username == Forum.usernames)
+                    fullname = "White";
+                else
+                    
+                    fullname = "Green";
+
             }
-            return time;
+            return fullname;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
